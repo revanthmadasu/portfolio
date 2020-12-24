@@ -1,0 +1,39 @@
+@import "styles/base";
+.intro-section {
+  .my-animation {
+    animation-name: popUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count:1;
+    display: inline-block;
+  }
+}
+.profile-pic {
+  background-image: url('./assets/img/revanth-photo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation-name: popUp2;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count:1;
+}
+@keyframes popUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes popUp2 {
+  from {
+    transform: scale(0);
+    width: 0px;
+    height: 0px;
+  }
+  to {
+    transform: scale(1);
+    width:250px;
+    height: 250px;
+  }
+}

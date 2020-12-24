@@ -1,0 +1,6 @@
+body {
+    background: radial-gradient(ellipse at bottom, #2b2b2b 0%, black 70%);
+}
+body #root {
+    color: white;
+}
