@@ -1,9 +1,21 @@
 /* Smartphones (portrait and landscape) ----------- */
+$profile_pic_size: 10px;
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles */
     h1 {
-        font-size: 1.75em;
+        font-size: 1.45em;
     }
+    $profile_pic_size: 100px;
+    @keyframes popUp2 {
+        from {
+          width: 0px;
+          height: 0px;
+        }
+        to {
+          width:100px;
+          height: 100px;
+        }
+      }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -19,33 +31,105 @@
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     /* Styles */
+    $profile_pic_size: 125px;
+    @keyframes popUp2 {
+        from {
+          width: 0px;
+          height: 0px;
+        }
+        to {
+          width:150px;
+          height: 150px;
+        }
+      }
 }
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
     /* Styles */
+    @keyframes popUp2 {
+        from {
+          width: 0px;
+          height: 0px;
+        }
+        to {
+          width:150px;
+          height: 150px;
+        }
+      }
 }
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
     /* Styles */
+    @keyframes popUp2 {
+        from {
+          width: 0px;
+          height: 0px;
+        }
+        to {
+          width:150px;
+          height: 150px;
+        }
+      }
 }
 
 /* iPad-----------  */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+    @keyframes popUp2 {
+        from {
+          width: 0px;
+          height: 0px;
+        }
+        to {
+          width:150px;
+          height: 150px;
+        }
+      }
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
     /* Styles */
+    @keyframes popUp2 {
+        from {
+          width: 0px;
+          height: 0px;
+        }
+        to {
+          width:150px;
+          height: 150px;
+        }
+      }
 }
 
 /* Desktops and laptops ----------- */
 @media only screen and (min-width : 1224px) {
     /* Styles */
+    $profile_pic_size: 250px;
+    @keyframes popUp2 {
+        from {
+          width: 0px;
+          height: 0px;
+        }
+        to {
+          width:250px;
+          height: 250px;
+        }
+      }
 }
 
 /* Large screens ----------- */
 @media only screen and (min-width : 1824px) {
     /* Styles */
+    @keyframes popUp2 {
+        from {
+          width: 0px;
+          height: 0px;
+        }
+        to {
+          width:250px;
+          height: 250px;
+        }
+      }
 }

@@ -1,3 +1,4 @@
+@import "../../styles/variables";
 .blast-letter {
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -11,7 +12,7 @@
         color: #0ffdd8;
     }
     &.name {
-        color: #db1853;
+        color: $dark-pink;
         &:hover {
             color: #0ffdd8;
         }

@@ -1,0 +1,39 @@
+import React, { Component } from 'react';
+import { skills } from './skills';
+import { SkillItem } from './skill-item/skill-item';
+import './skills-animation.scss';
+export class SkillsAnimation extends React.Component {
+    skills = skills;
+    constructor() {
+        super();
+        this.state = {
+            showSkills: false
+        };
+        setTimeout(() => {
+            this.state.showSkills = true;
+            this.setState(this.state);
+        }, 250);
+    }
+    componentDidMount() {
+        
+    }
+    render() {
+        const allSkills = [];
+        for (let key in skills) {
+            skills[key].forEach(item => {
+                allSkills.push(item);
+            });
+        }
+        const tags = allSkills.sort((itemA, itemB) => itemB.rating - itemA.rating)
+            .map(item => <SkillItem className={item.skill} rating={item.rating} skill={item.skill}></SkillItem>);
+        return (
+            <div className="skill-badges-container">
+                {
+                this.state.showSkills && <div className="skill-badges w3-animate-right">
+                    {tags}
+                </div>
+                }
+            </div>
+        )
+    }
+}

@@ -13,7 +13,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   animation-name: popUp2;
-  animation-duration: 2s;
+  animation-duration: 0s;
   animation-fill-mode: both;
   animation-iteration-count:1;
 }
@@ -23,17 +23,39 @@
   }
   to {
     transform: scale(1);
+    }
+}
+.skills-section {
+  // background: linear-gradient(150deg, rgba(54, 0, 22, 0.2) 20%, transparent 100%);
+
+}
+.scroll-btn {
+  height:40px;
+}
+.btn-scroll {
+  animation: scrollBtnBounce;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  color: rgba(255,255,255,0.5);
+  font-size: 1.7em;
+  &:hover {
+    color: white;
+  }
+  &:active {
+    border: none;
   }
 }
-@keyframes popUp2 {
+.nav-container+div {
+  overflow-x: hidden !important;
+  padding: 30px;
+  padding-top: $nav-height;
+}
+@keyframes scrollBtnBounce {
   from {
-    transform: scale(0);
-    width: 0px;
-    height: 0px;
+    transform: translateY(0px);
   }
   to {
-    transform: scale(1);
-    width:250px;
-    height: 250px;
+    transform: translateY(10px);
   }
 }
