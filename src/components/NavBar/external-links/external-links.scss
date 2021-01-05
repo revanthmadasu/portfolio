@@ -1,0 +1,21 @@
+.external-links-wrapper {
+    a {
+        width: 36px;
+        height: 36px;
+        font-size: 26px;
+        margin: 12px;
+        &.linkedin {
+            background: linear-gradient(45deg, rgba(0, 170, 255, 0.4), transparent 100%);
+        }
+        &.github {
+            background: linear-gradient(45deg, rgba(220, 220, 255, 1), transparent 100%);
+            .fa {
+                color:black;
+            }
+        }
+        .fa {
+            top: 6px;
+            left: 7px;
+        }
+    }
+}

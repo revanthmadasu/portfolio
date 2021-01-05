@@ -6,7 +6,6 @@ import { SkillsRoute } from './components/route-components/skills-route'
 import { HomeRoute } from './components/route-components/home-route';
 import  ProjectsRoute  from './components/route-components/projects/projects';
 import ExperienceRoute from './components/route-components/experience/experience-route';
-
 export class App extends React.Component {
   constructor() {
     super();
@@ -34,7 +33,7 @@ export class App extends React.Component {
                   <Redirect to="/home" /> : <HomeRoute />
                 </Route>
               </Switch>
-        </Router>   
+        </Router>
       </React.Fragment>
     );
   }

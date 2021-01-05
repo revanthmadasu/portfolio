@@ -1,5 +1,6 @@
 import { Nav, Navbar } from 'react-bootstrap';
 import NavItem from './NavItem/NavItem';
+import ExternalLinks from "./external-links/external-links";
 import React from 'react';
 import "./NavBar.scss";
 export function NavBar() {
@@ -30,6 +31,9 @@ export function NavBar() {
         <React.Fragment>
             <div className="nav-container text-center position-fixed w-100 w3-animate-top pt-3">
                 {navItemTags}
+                <span className="d-inline-block float-right mr-lg-5 mr-md-4 mr-sm-2">
+                    <ExternalLinks></ExternalLinks>
+                </span>
             </div>
         </React.Fragment>
 
