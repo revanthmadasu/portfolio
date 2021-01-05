@@ -4,6 +4,10 @@
         height: 36px;
         font-size: 26px;
         margin: 12px;
+        &:hover {
+            transform: scale(1.2);
+            transition-duration: 0.1s;
+        }
         &.linkedin {
             background: linear-gradient(45deg, rgba(0, 170, 255, 0.4), transparent 100%);
         }
