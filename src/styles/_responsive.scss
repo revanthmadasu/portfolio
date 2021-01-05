@@ -28,6 +28,12 @@ $profile_pic_size: 10px;
     /* Styles */
 }
 
+@media only screen and (min-width: 576px) {
+  .modal-dialog {
+    max-width: 75%;
+  }
+}
+
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     /* Styles */

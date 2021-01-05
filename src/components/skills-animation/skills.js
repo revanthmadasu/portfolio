@@ -141,5 +141,13 @@ export const skills = {
             imgUrl: '',
             category: ['library', 'styles', 'frontend']
         }
+    ],
+    versionControl: [
+        {
+            skill: 'git',
+            rating: 3.5,
+            imgUrl: '',
+            category: ['version-control', 'command-line']
+        }
     ]
 }

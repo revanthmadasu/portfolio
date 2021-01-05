@@ -1,0 +1,40 @@
+.card-container {
+    width: 190px;
+    height: 180px;
+    &:hover {
+        .view-project {
+            display: inline;
+        }
+        .image-bg {
+            opacity: 1;
+        }
+    }
+    .image-bg,.text-bg {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        transition-duration: 0.25s;
+    }
+    .reckon-bg {
+        background-image: url('../../../../assets/img/project-icons/reckon.png');
+    }
+    .aChat {
+        background-color: #3DDC84;
+        background-image: url('../../../../assets/img/project-icons/message.svg');
+    }
+    .data {
+        background-color: #d9f9fa;
+        background-image: url('../../../../assets/img/project-icons/data.svg');
+    }
+    .view-project {
+        width: 64px;
+        height: 64px; 
+        top: 33%;
+        left: 33%;
+        backdrop-filter: blur(10px);
+        font-size: 12px;
+        display: none;
+
+    }
+}

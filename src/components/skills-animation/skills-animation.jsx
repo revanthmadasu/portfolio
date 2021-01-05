@@ -6,13 +6,6 @@ export class SkillsAnimation extends React.Component {
     skills = skills;
     constructor() {
         super();
-        this.state = {
-            showSkills: false
-        };
-        setTimeout(() => {
-            this.state.showSkills = true;
-            this.setState(this.state);
-        }, 250);
     }
     componentDidMount() {
         
@@ -28,11 +21,9 @@ export class SkillsAnimation extends React.Component {
             .map(item => <SkillItem className={item.skill} rating={item.rating} skill={item.skill}></SkillItem>);
         return (
             <div className="skill-badges-container">
-                {
-                this.state.showSkills && <div className="skill-badges w3-animate-right">
+                <div className="skill-badges">
                     {tags}
                 </div>
-                }
             </div>
         )
     }

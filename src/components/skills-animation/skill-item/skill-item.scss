@@ -154,6 +154,12 @@
             background-image: url('/assets/img/skill-icons/bootstrap.svg');
         }
     }
+    &.git {
+        background: radial-gradient(ellipse at top, rgba(255, 0, 0, 0.3), transparent 100%);
+        .skill-badge-icon {
+            background-image: url('/assets/img/skill-icons/git.svg');
+        }
+    }
 }
 .MuiRating-root {
     font-size: 0.8rem !important;

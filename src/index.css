@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.cursor-pointer:hover {
+  cursor: pointer;
+}
+/* bootstrap modal */
+.modal-content {
+  color: white;
+  border-radius: 20px;
+  /* background: linear-gradient(55deg,black, transparent); */
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+}
+.modal-header {
+  border-bottom: 1px solid #0047ce;
+}
+.close {
+  opacity: 0.9;
+  color: #CC1E4E;
+  text-shadow: none;
+}
+.close:hover {
+  opacity: 1;
+  color: #CC1E4E;
+}
+.modal-backdrop.show {
+
+}

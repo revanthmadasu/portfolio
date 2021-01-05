@@ -2,6 +2,13 @@
 .nav-icon-container {
     min-width: 60px;
     height: 60px;
+    &.Experience {
+        a {
+            &:hover {
+                width: 120px;
+            }
+        }
+    }
     a {
         display: inline-flex;
         flex-direction: row;
@@ -11,13 +18,14 @@
         margin: 12px;
         width: 36px;
         height: 36px;
+        transition-duration: 0.25s;
         color: $dark-pink;
         &:hover {
             text-decoration: none;
             color: $dark-pink;
             margin: 0px;
             width: 100px;
-            transition-duration: 0.1s;
+            transition-duration: 0.25s;
             box-shadow: 1px 5px 30px 5px rgba(219, 24, 82, 0.5);
         }
         &.selected {

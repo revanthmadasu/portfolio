@@ -11,7 +11,7 @@ export function SkillsRoute () {
         <div className="w3-animate-left col-xs-12 col-sm-12 col-lg-12 col-xl-6 col-md-12">
           <SkillsList></SkillsList>
         </div>
-        <div className="col-xs-12 col-sm-12 col-lg-12 col-xl-6 col-md-12">
+        <div className="col-xs-12 col-sm-12 col-lg-12 col-xl-6 col-md-12 rounded-box w3-animate-right">
           <SkillsAnimation></SkillsAnimation>
         </div>
       </div>

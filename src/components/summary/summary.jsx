@@ -11,7 +11,7 @@ export function Summary() {
         <React.Fragment>
             <div className="w3-animate-right">
                 <h5 className="section-title text-uppercase p-2">About</h5>
-                <div className="container-fluid my-4 py-2">
+                <div className="container-fluid my-4 py-2 rounded-box">
                     <div className="badge blue-dark">
                         <div className="circle"> <i className="fa fa-rocket"></i></div>
                         <div className="ribbon">Problem Solver</div>

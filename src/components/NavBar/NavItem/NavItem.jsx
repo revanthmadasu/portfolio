@@ -18,13 +18,13 @@ export default class NavItem extends React.Component {
     }
     render() {
         return (
-            <span className="nav-icon-container d-inline-block mx-2">
+            <span className={`nav-icon-container d-inline-block mx-2 ${this.props.navTitle}`}>
                 <NavLink to={this.props.navLink} activeClassName="selected"
                     onMouseEnter={() => this.activate()} onMouseLeave={() => this.deactivate()}>
                     <i className={`nav-icon fa ${this.props.navIcon}`}></i>
                     {
                         this.state.hovered &&  
-                        <span className="nav-title">{this.props.navTitle}</span>
+                        <span className="nav-title pr-2">{this.props.navTitle}</span>
                     }
                 </NavLink>
             </span>

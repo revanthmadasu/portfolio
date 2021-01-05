@@ -1,0 +1,16 @@
+.modal-wrapper {
+    .sections-content {
+        background: rgba(0,0,0,0.5);
+        border-radius: 10px;
+        .section-title {
+            font-style: italic;
+            letter-spacing: normal !important;
+            text-transform: capitalize !important;
+            border-radius: 10px;
+        }
+    }
+}
+
+p {
+    margin-bottom: 0;
+}
