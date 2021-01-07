@@ -16,14 +16,14 @@ export function NavBar() {
             navLink: '/skills'
         },
         {
-            navTitle: 'Projects',
-            navIcon: 'fa-file-code-o',
-            navLink: '/projects'
-        },
-        {
             navTitle: 'Experience',
             navIcon: 'fa-briefcase',
             navLink: '/experience'
+        },
+        {
+            navTitle: 'Projects',
+            navIcon: 'fa-file-code-o',
+            navLink: '/projects'
         }
     ];
     const navItemTags = navItems.map(item => <NavItem navTitle={item.navTitle} navIcon={item.navIcon} navLink={item.navLink}></NavItem>)
