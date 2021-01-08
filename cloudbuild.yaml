@@ -8,16 +8,16 @@ steps:
 - name: 'asia.gcr.io/gae-runtimes/buildpacks/nodejs12/builder:nodejs12_20201129_12_20_0_RC00'
   args: ['/cnb/lifecycle/detector']
 - name: 'asia.gcr.io/gae-runtimes/buildpacks/nodejs12/builder:nodejs12_20201129_12_20_0_RC00'
-  directory: '/layers'
+  # directory: '/layers'
   args: ['/cnb/lifecycle/analyzer asia.gcr.io/revanth-madasu913/app-engine-tmp/app/ttl-2h:9e7e926a-6d6a-485b-b382-b20f0f232f5e']
 - name: 'asia.gcr.io/gae-runtimes/buildpacks/nodejs12/builder:nodejs12_20201129_12_20_0_RC00'
-  directory: '/layers'
+  # directory: '/layers'
   args: ['/cnb/lifecycle/restorer']
 - name: 'asia.gcr.io/gae-runtimes/buildpacks/nodejs12/builder:nodejs12_20201129_12_20_0_RC00'
-  directory: '/layers'
+  # directory: '/layers'
   args: ['/cnb/lifecycle/builder']
 - name: 'asia.gcr.io/gae-runtimes/buildpacks/nodejs12/builder:nodejs12_20201129_12_20_0_RC00'
-  directory: '/layers'
+  # directory: '/layers'
   args: ['/cnb/lifecycle/exporter asia.gcr.io/revanth-madasu913/app-engine-tmp/app/ttl-2h:9e7e926a-6d6a-485b-b382-b20f0f232f5e']
 - name: 'gcr.io/gae-runtimes/crane:current'
   args: ['copy asia.gcr.io/revanth-madasu913/app-engine-tmp/app/ttl-2h:9e7e926a-6d6a-485b-b382-b20f0f232f5e asia.gcr.io/revanth-madasu913/app-engine-tmp/app/ttl-2h/default/buildpack-app:latest']
