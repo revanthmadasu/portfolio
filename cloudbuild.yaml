@@ -32,10 +32,10 @@ steps:
     value: 33
   - name: CNB_GROUP_ID
     value: 33
-  - name: GAE_YAML_MAIN
-    value: 
-  - name: GOOGLE_ENTRYPOINT
-    value: 
+  # - name: GAE_YAML_MAIN
+  #   value: 
+  # - name: GOOGLE_ENTRYPOINT
+  #   value: 
   - name: GAE_APP_ENGINE_APIS
     value: false
   args: ['/bin/bash -c chown -R $CNB_USER_ID:$CNB_GROUP_ID /layers && chown -R $CNB_USER_ID:$CNB_GROUP_ID /workspace && chown -R $CNB_USER_ID:$CNB_GROUP_ID $HOME && chown -R $CNB_USER_ID:$CNB_GROUP_ID $BUILDER_OUTPUT && chmod -R 755 /workspace && chmod -R 755 $BUILDER_OUTPUT && mkdir -p "$CNB_PLATFORM_DIR/env" && if [[ -n "$GAE_YAML_MAIN" ]]; then echo -n "$GAE_YAML_MAIN" > "$CNB_PLATFORM_DIR/env/GAE_YAML_MAIN"; fi && if [[ -n "$GOOGLE_ENTRYPOINT" ]]; then echo -n "$GOOGLE_ENTRYPOINT" > "$CNB_PLATFORM_DIR/env/GOOGLE_ENTRYPOINT"; fi && if [[ -n "$GOOGLE_LABEL_BUILDER_VERSION" ]]; then echo -n "$GOOGLE_LABEL_BUILDER_VERSION" > "$CNB_PLATFORM_DIR/env/GOOGLE_LABEL_BUILDER_VERSION"; fi && echo -n "nodejs12" > "$CNB_PLATFORM_DIR/env/GOOGLE_RUNTIME" && echo -n "true" > "$CNB_PLATFORM_DIR/env/GOOGLE_DEBUG" && echo -n "$BUILDER_OUTPUT" > "$CNB_PLATFORM_DIR/env/BUILDER_OUTPUT" && if [[ -n "$GAE_APP_ENGINE_APIS" ]]; then echo -n "$GAE_APP_ENGINE_APIS" > "$CNB_PLATFORM_DIR/env/GAE_APP_ENGINE_APIS"; fi']
