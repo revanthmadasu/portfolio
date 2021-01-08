@@ -1,31 +1,23 @@
 steps:
   - name: 'gcr.io/cloud-builders/gcs-fetcher'
     args: ['--type=Manifest', '--location=gs://staging.revanth-madasu913.appspot.com/ae/9e7e926a-6d6a-485b-b382-b20f0f232f5e/manifest.json', '--dest_dir=/workspace']
-  
   - name: 'gcr.io/cloud-builders/gcloud'
     args: ['/bin/bash -c chown -R $CNB_USER_ID:$CNB_GROUP_ID /layers && chown -R $CNB_USER_ID:$CNB_GROUP_ID /workspace && chown -R $CNB_USER_ID:$CNB_GROUP_ID $HOME && chown -R $CNB_USER_ID:$CNB_GROUP_ID $BUILDER_OUTPUT && chmod -R 755 /workspace && chmod -R 755 $BUILDER_OUTPUT && mkdir -p "$CNB_PLATFORM_DIR/env" && if [[ -n "$GAE_YAML_MAIN" ]]; then echo -n "$GAE_YAML_MAIN" > "$CNB_PLATFORM_DIR/env/GAE_YAML_MAIN"; fi && if [[ -n "$GOOGLE_ENTRYPOINT" ]]; then echo -n "$GOOGLE_ENTRYPOINT" > "$CNB_PLATFORM_DIR/env/GOOGLE_ENTRYPOINT"; fi && if [[ -n "$GOOGLE_LABEL_BUILDER_VERSION" ]]; then echo -n "$GOOGLE_LABEL_BUILDER_VERSION" > "$CNB_PLATFORM_DIR/env/GOOGLE_LABEL_BUILDER_VERSION"; fi && echo -n "nodejs12" > "$CNB_PLATFORM_DIR/env/GOOGLE_RUNTIME" && echo -n "true" > "$CNB_PLATFORM_DIR/env/GOOGLE_DEBUG" && echo -n "$BUILDER_OUTPUT" > "$CNB_PLATFORM_DIR/env/BUILDER_OUTPUT" && if [[ -n "$GAE_APP_ENGINE_APIS" ]]; then echo -n "$GAE_APP_ENGINE_APIS" > "$CNB_PLATFORM_DIR/env/GAE_APP_ENGINE_APIS"; fi']
-
   - name: 'gcr.io/gae-runtimes/crane:shell'
   args: ['/busybox/sh -c (crane copy asia.gcr.io/revanth-madasu913/app-engine-tmp/build-cache/ttl-7d/default/buildpack-cache:latest asia.gcr.io/revanth-madasu913/app-engine-tmp/build-cache/ttl-7d/default/buildpack-cache:95d68490-ba5f-4d3e-9056-9e5368dd38a4 || echo "Unable to tag previous cache image. This is expected for new or infrequent deployments.") && (crane copy asia.gcr.io/revanth-madasu913/app-engine-tmp/app/ttl-2h/default/buildpack-app:latest asia.gcr.io/revanth-madasu913/app-engine-tmp/app/ttl-2h:9e7e926a-6d6a-485b-b382-b20f0f232f5e || echo "Unable to tag previous application image. This is expected for new or infrequent deployments.")']
-  
   - name: 'asia.gcr.io/gae-runtimes/buildpacks/nodejs12/builder:nodejs12_20201129_12_20_0_RC00'
   args: ['/cnb/lifecycle/detector']
-  
   - name: 'asia.gcr.io/gae-runtimes/buildpacks/nodejs12/builder:nodejs12_20201129_12_20_0_RC00'
   directory: '/layers'
   args: ['/cnb/lifecycle/analyzer asia.gcr.io/revanth-madasu913/app-engine-tmp/app/ttl-2h:9e7e926a-6d6a-485b-b382-b20f0f232f5e']
-  
   - name: 'asia.gcr.io/gae-runtimes/buildpacks/nodejs12/builder:nodejs12_20201129_12_20_0_RC00'
   directory: '/layers'
   args: ['/cnb/lifecycle/restorer']
-  
   - name: 'asia.gcr.io/gae-runtimes/buildpacks/nodejs12/builder:nodejs12_20201129_12_20_0_RC00'
   directory: '/layers'
   args: ['/cnb/lifecycle/builder']
-  
   - name: 'asia.gcr.io/gae-runtimes/buildpacks/nodejs12/builder:nodejs12_20201129_12_20_0_RC00'
   directory: '/layers'
   args: ['/cnb/lifecycle/exporter asia.gcr.io/revanth-madasu913/app-engine-tmp/app/ttl-2h:9e7e926a-6d6a-485b-b382-b20f0f232f5e']
-  
   - name: 'gcr.io/gae-runtimes/crane:current'
   args: ['copy asia.gcr.io/revanth-madasu913/app-engine-tmp/app/ttl-2h:9e7e926a-6d6a-485b-b382-b20f0f232f5e asia.gcr.io/revanth-madasu913/app-engine-tmp/app/ttl-2h/default/buildpack-app:latest']
