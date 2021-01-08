@@ -1,0 +1,16 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="66" width="66" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse stroke="#000" ry="32" rx="31.74991" id="svg_3" cy="31.82552" cx="32.16667" stroke-width="0" fill="#bf005f"/>
+<text xmlns="http://www.w3.org/2000/svg" stroke="#000" transform="matrix(0.9335336132230735,0,0,0.8184772236298349,2.565128767010301,0.23398666722785366) " xml:space="preserve" text-anchor="start" font-family="'-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',     sans-serif'" font-size="60" id="svg_5" y="57" x="12" stroke-opacity="null" stroke-width="0" fill="#000000" style="&#10;    font-size: 58px;&#10;    font-family: system-ui;&#10;">R</text>
+ </g>
+</svg>
