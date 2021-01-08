@@ -4,4 +4,6 @@ steps:
 - name: gcr.io/cloud-builders/npm
   args: ['run', 'build']
 - name: gcr.io/$PROJECT_ID/app-engine-tmp
+  args: ['push']
+- name: gcr.io/$PROJECT_ID/app-engine-tmp
   args: ['deploy']
