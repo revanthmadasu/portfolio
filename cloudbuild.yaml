@@ -1,28 +1,28 @@
-env:
-- name: CNB_APP_DIR
-  value: /workspace
-- name: CNB_ANALYZED_PATH
-  value: /layers/analyzed.toml
-- name: CNB_BUILDPACKS_DIR
-  value: /cnb/buildpacks
-- name: CNB_CACHE_IMAGE
-  value: asia.gcr.io/revanth-madasu913/app-engine-tmp/build-cache/ttl-7d/default/buildpack-cache:8cc7e067-5815-46de-bc3c-514b25a2ba6a
-- name: CNB_GROUP_PATH
-  value: /layers/group.toml
-- name: CNB_LAYERS_DIR
-  value: /layers
-- name: CNB_LOG_LEVEL
-  value: debug
-- name: CNB_PLAN_PATH
-  value: /layers/plan.toml
-- name: CNB_PLATFORM_DIR
-  value: /platform
-- name: CNB_RUN_IMAGE
-  value: asia.gcr.io/gae-runtimes/buildpacks/nodejs12/run:nodejs12_20201129_12_20_0_RC00
-- name: CNB_ANALYZE_SKIP_LAYERS
-  value: false
-- name: GOOGLE_LABEL_BUILDER_VERSION
-  value: nodejs12_20201129_12_20_0_RC00
+# env:
+# - name: CNB_APP_DIR
+#   value: /workspace
+# - name: CNB_ANALYZED_PATH
+#   value: /layers/analyzed.toml
+# - name: CNB_BUILDPACKS_DIR
+#   value: /cnb/buildpacks
+# - name: CNB_CACHE_IMAGE
+#   value: asia.gcr.io/revanth-madasu913/app-engine-tmp/build-cache/ttl-7d/default/buildpack-cache:8cc7e067-5815-46de-bc3c-514b25a2ba6a
+# - name: CNB_GROUP_PATH
+#   value: /layers/group.toml
+# - name: CNB_LAYERS_DIR
+#   value: /layers
+# - name: CNB_LOG_LEVEL
+#   value: debug
+# - name: CNB_PLAN_PATH
+#   value: /layers/plan.toml
+# - name: CNB_PLATFORM_DIR
+#   value: /platform
+# - name: CNB_RUN_IMAGE
+#   value: asia.gcr.io/gae-runtimes/buildpacks/nodejs12/run:nodejs12_20201129_12_20_0_RC00
+# - name: CNB_ANALYZE_SKIP_LAYERS
+#   value: false
+# - name: GOOGLE_LABEL_BUILDER_VERSION
+#   value: nodejs12_20201129_12_20_0_RC00
 steps:
 - name: 'gcr.io/cloud-builders/gcs-fetcher'
   args: ['--type=Manifest', '--location=gs://staging.revanth-madasu913.appspot.com/ae/9e7e926a-6d6a-485b-b382-b20f0f232f5e/manifest.json', '--dest_dir=/workspace']
