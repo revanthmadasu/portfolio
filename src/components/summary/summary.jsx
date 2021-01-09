@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './summary.scss';
 export function Summary() {
-    const summaryDesc1 = `I'm a passionate software developer with main area of expertise in frontend development.
-     Building applications which solve real world problems is what that drives me.`;
-    const sumaryDesc2 = `Problem solver, team player, constant learner and result oriented person. I never compromise in the quality of work and take pride in my work.`;
-    const summaryDesc3 = `Apart from frontend development I'm interested in FullStack and Machine Learning roles.`;
-    const summaryDesc4 = `In my early stage of career and looking for a great engineering team that would kick start my career.`;
-    const summaryDesc5 = `I'm open to relocate to anyplace in the world and prefer remote employment.`;
+    const summaryDesc1 = `I'm a passionate software developer with the main area of expertise in frontend development.
+     Building applications that solve real-world problems is what drives me.`;
+    const sumaryDesc2 = `Problem solver, team player, constant learner, and result-oriented person. I never compromise on the quality of work and take pride in my work.`;
+    const summaryDesc3 = `Apart from front-end development, I'm interested in FullStack and Machine Learning roles.`;
+    const summaryDesc4 = `In the early stage of my career and looking for a great engineering team that would kick start my career.`;
+    const summaryDesc5 = `I'm open to relocate to any place in the world and prefer remote employment.`;
     return (
         <React.Fragment>
             <div className="w3-animate-right">

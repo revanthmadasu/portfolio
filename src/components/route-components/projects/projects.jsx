@@ -36,9 +36,9 @@ export default class ProjectsRoute extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="w3-animate-left">
                 <ProjectModal modalObj = {this.state.modalObj} onHideModal={this.hideModal} parent={this}></ProjectModal>
-                <h5 className="section-title w3-animate-left p-2">Projects</h5>
+                <h5 className="section-title p-2">Projects</h5>
                 <div className="row p-2 m-1">
                         {this.projectTags}
                 </div>
