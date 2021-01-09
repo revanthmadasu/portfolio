@@ -3,7 +3,7 @@ import './skills-list.scss';
 export function SkillsList() {
     return (
         <React.Fragment>
-            <div className="container-fluid">
+            <div className="container-fluid my-3">
                 <div className="skills-table">
                     <div className="row py-2">
                         <div className="col-lg-2 col-md-2 col-xl-2 col-sm-4">
@@ -56,21 +56,21 @@ export function SkillsList() {
                         </div>
                     </div>
                 </div>
-                <div className="skills-desc row py-4 my-3">
+                <div className="skills-desc dark-rounded-box row py-4 my-3">
                     <p>
                         The main area of my expertise is front-end development.  
                     </p>
                     <p>
-                        Building enterprise, scalable web application with Angular, HTML, CSS, Javascript using different design patterns and approaches.
+                        Building enterprise, scalable web applications with Angular, HTML, CSS, Javascript using different design patterns and approaches.
                     </p>
                     <p>
-                        I also have expertise in full stack development with spring, MEA(R)N stack.
+                        I also have expertise in full-stack development with spring, MEA(R)N stack.
                     </p>
                     <p>
-                        I am also deeply interested in Machine Learning and would love to take a ML role.
+                        I am also deeply interested in Machine Learning and would love to take an ML role.
                     </p>
                     <p>
-                        I love problem solving and practice my problem solving, data structures and algorithms skills on <a href="https://www.hackerrank.com/Revanth_Madasu" target="_blank"> Hackerrank</a>.
+                        I love problem solving and practice my problem solving, data structures, and algorithms skills on <a href="https://www.hackerrank.com/Revanth_Madasu" target="_blank"> Hackerrank</a>.
                     </p>
                 </div>
             </div>

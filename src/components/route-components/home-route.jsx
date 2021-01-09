@@ -64,8 +64,7 @@ export class HomeRoute extends Component {
         const currTags = [];
         const recursiveFuntion = (index) => {
           if(index === tags.length) {
-            // setTimeout(() => this.showSkills(), 750)
-            setTimeout(() => this.showSkills(), 250)
+            setTimeout(() => this.showSkills(), 0)
             return;
           } else {
             setTimeout(() => {
@@ -107,7 +106,7 @@ export class HomeRoute extends Component {
                     </h1>
                 </div>
                 <div className="col-xs-12 col-sm-12 col-xl-6 col-lg-12 col-md-12">
-                    <div className="about-section py-lg-5">
+                    <div className="about-section pt-lg-5 pb-lg-4 px-lg-3 dark-rounded-box">
                     {
                         this.state.showSkills && 
                         <React.Fragment>
