@@ -16,6 +16,10 @@
   animation-duration: 0s;
   animation-fill-mode: both;
   animation-iteration-count:1;
+  &:hover {
+    transform: scale(1.05);
+    transition-duration: 0.2s;
+  }
 }
 @keyframes popUp {
   from {
