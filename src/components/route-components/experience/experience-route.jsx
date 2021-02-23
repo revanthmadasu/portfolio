@@ -3,6 +3,7 @@ import './experience.scss';
 import ColortokensIcon from './colortokens-icon';
 import {SkillItem} from '../../skills-animation/skill-item/skill-item';
 import { skills } from '../../skills-animation/skills';
+import { BlastString } from '../../blast-string/blast-string';
 export default class ExperienceRoute extends React.Component {
 
     skills = ['angular', 'typescript', 'javascript', 'jasmine', 'html', 'css', 'bootstrap', 'git'];
@@ -10,7 +11,9 @@ export default class ExperienceRoute extends React.Component {
     render() {
         return (
             <div className="w3-animate-left">
-                <h5 className="section-title p-2">Experience</h5>
+                <h5 className="section-title p-2">
+                    <BlastString stringValue="Experience"></BlastString>
+                </h5>
                 <div className="experience-wrapper rounded-box p-2 mx-1 my-4">
                     <div>
                         <span className="row">

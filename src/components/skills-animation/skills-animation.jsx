@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { skills } from './skills';
 import { SkillItem } from './skill-item/skill-item';
 import './skills-animation.scss';
+import { BlastString } from '../blast-string/blast-string';
 export class SkillsAnimation extends React.Component {
     skills = skills;
     constructor() {
@@ -27,7 +28,9 @@ export class SkillsAnimation extends React.Component {
                     </div>
                 </div>
                 <div className="hackerrank-badges-section mt-3 mb-4 mx-3">
-                <h5 class="section-title w3-animate-left p-2 mb-3">Hackerrank Badges</h5>
+                <h5 class="section-title w3-animate-left p-2 mb-3">
+                    <BlastString stringValue={'Hackerrank Badges'}></BlastString>
+                    </h5>
                     <div className="hackerrank-badges">
                         <div className="hr-badge d-inline-block"><svg viewBox="0 0 91.66667 100" class="hexagon"><g><defs>
                                         <linearGradient id="badge-gold-gradient" x1="52.5" y1="2.5" x2="52.5" y2="102.5" gradientUnits="userSpaceOnUse">

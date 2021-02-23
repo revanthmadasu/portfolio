@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BlastString } from '../blast-string/blast-string';
 import './summary.scss';
 export function Summary() {
     const summaryDesc1 = `I'm a passionate software developer with the main area of expertise in frontend development.
@@ -10,7 +11,9 @@ export function Summary() {
     return (
         <React.Fragment>
             <div className="w3-animate-right">
-                <h5 className="section-title text-uppercase p-2">About</h5>
+                <h5 className="section-title text-uppercase p-2">
+                    <BlastString stringValue="About"></BlastString>
+                </h5>
                 <div className="container-fluid my-4 py-2 rounded-box">
                     <div className="badge blue-dark">
                         <div className="circle"> <i className="fa fa-rocket"></i></div>

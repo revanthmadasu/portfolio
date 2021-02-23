@@ -1,4 +1,5 @@
 import React from 'react';
+import { BlastString } from '../../blast-string/blast-string';
 import ProjectCard from './project-card/project-card';
 import ProjectModal from './projects-modal/projects-modal';
 export default class ProjectsRoute extends React.Component {
@@ -38,7 +39,9 @@ export default class ProjectsRoute extends React.Component {
         return (
             <div className="w3-animate-left">
                 <ProjectModal modalObj = {this.state.modalObj} onHideModal={this.hideModal} parent={this}></ProjectModal>
-                <h5 className="section-title p-2">Projects</h5>
+                <h5 className="section-title p-2">
+                    <BlastString stringValue="Projects"></BlastString>
+                </h5>
                 <div className="row p-2 m-1">
                         {this.projectTags}
                 </div>
