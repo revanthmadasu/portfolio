@@ -7,3 +7,22 @@
         animation-duration: 0.25s;
     }
 }
+.hackerrank-badges {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    .hr-badge {
+        height: 90px;
+        width: 80px;
+        .badge-title {
+            text-anchor: middle;
+            font-weight: 700;
+            font-family: sans-serif;
+            fill: #39424e;
+        }
+        &:hover {
+            transition: transform 0.25s;
+            transform: scale(1.5);
+        }
+    }
+}
