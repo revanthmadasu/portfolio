@@ -1,11 +1,16 @@
 import React from 'react';
 import './blast-letter.scss';
 export class BlastLetter extends React.Component {
+    blastInterval = 10;
     constructor(props) {
         super(props);
         this.state = {
             blastActive: ''
         }
+        this.blastInterval = 5000 + Math.random()*30000;
+        setInterval(() => {
+            this.blast();
+        }, this.blastInterval);
     }
     render() {
         return (
