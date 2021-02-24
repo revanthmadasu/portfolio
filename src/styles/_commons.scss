@@ -2,15 +2,19 @@
     @extend .rounded,.w3-animate-right !optional;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+    // background: linear-gradient(45deg, black 30%, transparent 60%);
+    // background: linear-gradient(45deg, rgba(0, 220, 255,0.1) 10%, transparent 85%);
     background: linear-gradient(45deg, black 30%, transparent 60%);
-    background: linear-gradient(45deg, rgba(0, 220, 255,0.1) 10%, transparent 85%);
+    background: linear-gradient(45deg, rgba(0, 220, 255,0.2) 40%, transparent 85%);
     border: 10px;
     animation-duration: 0.25s;
-    color: rgba(255,255,255,0.6);
+    // color: rgba(255,255,255,0.6);
+    color: #fff;
     &:hover {
-        color: #fff;
-        background: linear-gradient(45deg, black 30%, transparent 60%);
-        background: linear-gradient(45deg, rgba(0, 220, 255,0.2) 40%, transparent 85%);
-        transition: 0.25s;
+        // color: #fff;
+        // background: linear-gradient(45deg, black 30%, transparent 60%);
+        // background: linear-gradient(45deg, rgba(0, 220, 255,0.2) 40%, transparent 85%);
+        // opacity: 1;
+        // transition: 0.25s;
     }
 }
