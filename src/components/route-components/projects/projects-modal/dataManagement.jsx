@@ -1,3 +1,4 @@
+import { BlastString } from "../../../blast-string/blast-string";
 import { SkillItem } from "../../../skills-animation/skill-item/skill-item";
 export default function DataManagement(props) {
     return (
@@ -11,7 +12,9 @@ export default function DataManagement(props) {
                 </p>
             </section>
             <section className="sections-content mt-3">
-                <h5 className="section-title p-1 pl-2">Features</h5>
+                <h5 className="section-title p-1 pl-2">
+                    <BlastString stringValue="Features"></BlastString>
+                </h5>
                 <div className="features-content p-2">
                     <div className="row my-2 py-1">
                         <div className="col-lg-2 col-md-4 col-sm-12">
@@ -47,7 +50,9 @@ export default function DataManagement(props) {
             </section>
 
             <section className="sections-content mt-3">
-                <h5 className="section-title p-1 pl-2">Technologies</h5>
+                <h5 className="section-title p-1 pl-2">
+                    <BlastString stringValue="Technologies"></BlastString>
+                </h5>
                 <div className="features-content p-2">
                     <div className="row my-2 py-1">
                         <div className="col-auto">

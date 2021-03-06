@@ -5,7 +5,7 @@
         .section-title {
             font-style: italic;
             letter-spacing: normal !important;
-            text-transform: capitalize !important;
+            // text-transform: capitalize !important;
             border-radius: 10px;
         }
     }
@@ -13,4 +13,18 @@
 
 p {
     margin-bottom: 0;
+    line-height: 25px;
+}
+
+.github {
+    width: 36px;
+    height: 36px;
+    font-size: 26px;
+    margin: 12px;
+    background: linear-gradient(45deg, rgba(220, 220, 255, 1), transparent 100%);
+    .fa {
+        color:black;
+        top: 6px;
+        left: 7px;
+    }
 }

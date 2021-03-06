@@ -19,13 +19,16 @@ code {
 .modal-content {
   color: white;
   border-radius: 20px;
-  border: 1px solid var(--green);
+  border: 1px solid black;
   /* background: linear-gradient(55deg,black, transparent); */
   background: rgba(0,0,0,0.5);
   backdrop-filter: blur(5px);
 }
 .modal-header {
-  border-bottom: 1px solid #0047ce;
+  border-bottom: 1px solid rgba(0, 71, 206,0.5);
+}
+button:focus {
+  outline: none;
 }
 .close {
   opacity: 0.9;

@@ -5,17 +5,25 @@ import ProjectModal from './projects-modal/projects-modal';
 export default class ProjectsRoute extends React.Component {
     projects = [
         {
+            title: 'mastodon.co.in',
+            backgroundType: 'image',
+            gitUrl: 'https://github.com/revanthmadasu/mastodon'
+        },
+        {
             title: 'aChat',
             backgroundType: 'image',
+            gitUrl: 'https://github.com/revanthmadasu/Achat'
         },
         {
             title: 'Reckon',
             backgroundType: 'image',
+            gitUrl: 'https://github.com/revanthmadasu/reckon'
         },
         {
             title: 'Data Management',
             backgroundType: 'image',
-        }
+            gitUrl: 'https://github.com/revanthmadasu/School-Administration-System'
+        },
     ];
     modalObj = {
         project: '',
@@ -51,7 +59,8 @@ export default class ProjectsRoute extends React.Component {
     openModal(project, self) {
         self.state.modalObj = {
             project: project.title,
-            show: true
+            show: true,
+            gitUrl: project.gitUrl
         }
         self.setState(self.state);
     }
