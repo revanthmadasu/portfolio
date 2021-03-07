@@ -6,10 +6,16 @@
         .image-bg {
             opacity: 1;
         }
+        .project-title {
+            color: #fff;
+        }
     }
     .card-thumbnail {        
         width: 190px;
         height: 180px;
+    }
+    .project-title {
+        color: rgba(255,255,255,0.7);
     }
     .image-bg,.text-bg {
         background-position: center;
@@ -42,6 +48,6 @@
         backdrop-filter: blur(10px);
         font-size: 12px;
         display: none;
-
+        // background: linear-gradient(45deg, grey, transparent)
     }
 }

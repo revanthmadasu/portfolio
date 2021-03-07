@@ -33,7 +33,7 @@ export default function ProjectCard(props) {
                 <span className="position-absolute view-project text-center rounded-circle py-3 cursor-pointer"> View Project</span>
             </div>
             <span className="project-title">
-                <h4 className="text-center py-2 opacity-7">{props.project.title}</h4>
+                <h4 className="text-center py-2">{props.project.title}</h4>
             </span>
         </div>
     </React.Fragment>)
