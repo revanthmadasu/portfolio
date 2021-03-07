@@ -3,7 +3,7 @@ import { SkillItem } from "../../../skills-animation/skill-item/skill-item";
 export default function DataManagement(props) {
     return (
         <div className="modal-wrapper achat">
-            <section className="project-description">
+            <section className="project-description px-2">
                 <p>
                     Achieved digitalization of data by implementing a desktop application that records student data, fee data, executes queries to display student, fee, audit information. Transformed manual record system to digital. 
                 </p>
@@ -15,7 +15,7 @@ export default function DataManagement(props) {
                 <h5 className="section-title p-1 pl-2">
                     <BlastString stringValue="Features"></BlastString>
                 </h5>
-                <div className="features-content p-2">
+                <div className="features-content py-2 px-3">
                     <div className="row my-2 py-1">
                         <div className="col-lg-2 col-md-4 col-sm-12">
                             Student Data Management
@@ -53,7 +53,7 @@ export default function DataManagement(props) {
                 <h5 className="section-title p-1 pl-2">
                     <BlastString stringValue="Technologies"></BlastString>
                 </h5>
-                <div className="features-content p-2">
+                <div className="features-content py-2 px-3">
                     <div className="row my-2 py-1">
                         <div className="col-auto">
                             <SkillItem className='java' hideRating={true} skill='java'></SkillItem>

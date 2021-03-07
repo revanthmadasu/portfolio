@@ -3,7 +3,7 @@ import { SkillItem } from "../../../skills-animation/skill-item/skill-item";
 export default function MastodonModal(props) {
     return (
         <div className="modal-wrapper achat">
-            <section className="project-description">
+            <section className="project-description px-2">
                 <p className="py-1">
                     Mastodon is an open source decentralized social network - by the people for the people.
                 </p>
@@ -16,7 +16,7 @@ export default function MastodonModal(props) {
                 <h5 className="section-title p-1 pl-2">
                     <BlastString stringValue="Technologies"></BlastString>
                 </h5>
-                <div className="features-content p-2">
+                <div className="features-content py-2 px-3">
                     <div className="row my-2 py-1">
                         <div className="col-auto">
                             <SkillItem className='GCP' hideRating={true} skill='GCP'></SkillItem>

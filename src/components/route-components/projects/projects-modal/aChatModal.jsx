@@ -3,12 +3,12 @@ import { SkillItem } from "../../../skills-animation/skill-item/skill-item";
 export default function AchatModal(props) {
     return (
         <div className="modal-wrapper achat">
-            <section className="project-description">
+            <section className="project-description px-2">
                 aChat is an instant messaging android application developed in Android Studio with Java.
             </section>
             <section className="sections-content mt-3">
                 <h5 className="section-title p-1 pl-2"><BlastString stringValue='Features'></BlastString></h5>
-                <div className="features-content p-2">
+                <div className="features-content py-2 px-3">
                     <div className="row my-2 py-1">
                         <div className="col-lg-2 col-md-4 col-sm-12">
                             Auto-Reply
@@ -55,7 +55,7 @@ export default function AchatModal(props) {
                 <h5 className="section-title p-1 pl-2">
                     <BlastString stringValue="Technologies"></BlastString>
                 </h5>
-                <div className="features-content p-2">
+                <div className="features-content py-2 px-3">
                     <div className="row my-2 py-1">
                         <div className="col-lg-2 col-md-4 col-sm-12">
                             Frontend
