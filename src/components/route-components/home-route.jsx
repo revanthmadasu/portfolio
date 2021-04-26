@@ -94,7 +94,7 @@ export class HomeRoute extends Component {
       }
     render() {    
         return (
-            <div className="intro-section h-100 overflow-auto">
+            <div className="intro-section h-100 overflow-auto custom-scroll">
                 <div className="row">
                 <div className="col-xs-12 col-sm-12 col-lg-12 col-xl-6 col-md-12 w3-animate-left">
                     {

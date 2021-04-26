@@ -45,7 +45,7 @@ export default class ProjectsRoute extends React.Component {
     }
     render() {
         return (
-            <div className="w3-animate-left">
+            <div className="w3-animate-left h-100 averflow-auto custom-scroll">
                 <ProjectModal modalObj = {this.state.modalObj} onHideModal={this.hideModal} parent={this}></ProjectModal>
                 <h5 className="section-title p-2">
                     <BlastString stringValue="Projects"></BlastString>

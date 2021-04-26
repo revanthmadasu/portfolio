@@ -3,7 +3,7 @@ import {SkillsAnimation} from '../skills-animation/skills-animation';
 import { BlastString } from '../blast-string/blast-string';
 export function SkillsRoute () {
     return (          
-    <div className="section skills-section h-100 overflow-auto">
+    <div className="section skills-section h-100 overflow-auto custom-scroll">
     <div className="">
       <h5 className="section-title w3-animate-left p-2">
           <BlastString stringValue="Skills"></BlastString>

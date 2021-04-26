@@ -10,7 +10,7 @@ export default class ExperienceRoute extends React.Component {
     skillTags = this.skills.map(skill => <SkillItem hideRating={true} skill={skill}></SkillItem>);
     render() {
         return (
-            <div className="w3-animate-left">
+            <div className="w3-animate-left h-100 overflow-auto custom-scroll">
                 <h5 className="section-title p-2">
                     <BlastString stringValue="Experience"></BlastString>
                 </h5>
