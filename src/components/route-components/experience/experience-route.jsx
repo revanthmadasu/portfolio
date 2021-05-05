@@ -14,7 +14,7 @@ export default class ExperienceRoute extends React.Component {
                 <h5 className="section-title p-2">
                     <BlastString stringValue="Experience"></BlastString>
                 </h5>
-                <div className="experience-wrapper rounded-box p-2 mx-1 my-4">
+                <div className="experience-wrapper rounded-box p-3 mx-1 my-4">
                     <div>
                         <span className="row">
                             <ColortokensIcon></ColortokensIcon>

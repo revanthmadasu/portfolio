@@ -56,7 +56,7 @@ export function SkillsList() {
                         </div>
                     </div>
                 </div>
-                <div className="skills-desc dark-rounded-box row py-4 my-3">
+                <div className="skills-desc dark-rounded-box row p-3 my-3">
                     <p>
                         The main area of my expertise is front-end development.  
                     </p>
