@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {BlastLetter} from '../blast-letter/blast-letter';
-import {Summary} from '../summary/summary';
+import BlastLetter from 'components/blast-letter';
+import Summary from 'components/summary';
 export class HomeRoute extends Component {
     constructor() {
         super();

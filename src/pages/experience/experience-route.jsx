@@ -1,9 +1,9 @@
 import React from 'react';
 import './experience.scss';
 import ColortokensIcon from './colortokens-icon';
-import {SkillItem} from '../../skills-animation/skill-item/skill-item';
-import { skills } from '../../skills-animation/skills';
-import { BlastString } from '../../blast-string/blast-string';
+import SkillItem from 'components/skills-animation/skill-item';
+import { skills } from 'components/skills-animation/skills';
+import BlastString from 'components/blast-string';
 export default class ExperienceRoute extends React.Component {
 
     skills = ['angular', 'typescript', 'javascript', 'jasmine', 'html', 'css', 'bootstrap', 'git'];

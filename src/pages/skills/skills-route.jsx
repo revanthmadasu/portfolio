@@ -1,6 +1,9 @@
-import {SkillsList} from '../skills-list/skills-list';
-import {SkillsAnimation} from '../skills-animation/skills-animation';
-import { BlastString } from '../blast-string/blast-string';
+// import {SkillsList} from '../skills-list/skills-list';
+// import {SkillsAnimation} from '../skills-animation/skills-animation';
+// import { BlastString } from '../blast-string/blast-string';
+import SkillsList from 'components/skills-list';
+import SkillsAnimation from 'components/skills-animation';
+import BlastString from 'components/blast-string';
 export function SkillsRoute () {
     return (          
     <div className="section skills-section h-100 overflow-auto custom-scroll">

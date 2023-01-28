@@ -26,19 +26,25 @@
         border-radius: 30px;
     }
     .reckon-bg {
-        background-image: url('../../../../assets/img/project-icons/reckon.png');
+        // background-image: url('/src/assets/img/project-icons/reckon.png');
+        background-image: url('../../../assets/img/project-icons/reckon.png');
     }
     .aChat {
         background-color: #3DDC84;
-        background-image: url('../../../../assets/img/project-icons/message.svg');
+        // background-image: url('/src/assets/img/project-icons/message.svg');
+        background-image: url('../../../assets/img/project-icons/message.svg');
     }
     .data {
         background-color: #d9f9fa;
-        background-image: url('../../../../assets/img/project-icons/data.svg');
+        // background-image: url('/src/assets/img/project-icons/data.svg');
+        background-image: url('../../../assets/img/project-icons/data.svg');
+
     }
     .mastodon {
         background-color: #d9f9fa;
-        background-image: url('../../../../assets/img/project-icons/joinmastodon-tile.svg');
+        // background-image: url('/src/assets/img/project-icons/joinmastodon-tile.svg');
+        background-image: url('../../../assets/img/project-icons/joinmastodon-tile.svg');
+
     }
     .view-project {
         width: 64px;

@@ -1,5 +1,5 @@
-import { BlastString } from "../../../blast-string/blast-string";
-import { SkillItem } from "../../../skills-animation/skill-item/skill-item";
+import BlastString from "components/blast-string";
+import SkillItem from "components/skills-animation/skill-item";
 export default function MastodonModal(props) {
     return (
         <div className="modal-wrapper achat">

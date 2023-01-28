@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { skills } from './skills';
-import { SkillItem } from './skill-item/skill-item';
+import SkillItem from './skill-item';
 import './skills-animation.scss';
-import { BlastString } from '../blast-string/blast-string';
+import BlastString from '../blast-string';
 import { HackerRankBadgesImgs }  from './hackerrank-badges';
 export class SkillsAnimation extends React.Component {
     skills = skills;

@@ -1,6 +1,6 @@
 import { Nav, Navbar } from 'react-bootstrap';
-import NavItem from './NavItem/NavItem';
-import ExternalLinks from "./external-links/external-links";
+import NavItem from './NavItem';
+import ExternalLinks from "./external-links";
 import React from 'react';
 import "./NavBar.scss";
 export function NavBar() {
