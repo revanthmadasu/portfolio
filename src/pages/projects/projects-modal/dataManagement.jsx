@@ -1,14 +1,14 @@
-import { BlastString } from "../../../blast-string/blast-string";
-import { SkillItem } from "../../../skills-animation/skill-item/skill-item";
-export default function ReckonModal(props) {
+import BlastString from "components/blast-string";
+import SkillItem from "components/skills-animation/skill-item";
+export default function DataManagement(props) {
     return (
         <div className="modal-wrapper achat">
             <section className="project-description px-2">
                 <p>
-                    Achieved job prediction by taking a psychometric test and generating MBTI personality type.
+                    Achieved digitalization of data by implementing a desktop application that records student data, fee data, executes queries to display student, fee, audit information. Transformed manual record system to digital. 
                 </p>
                 <p>
-                    Implemented Naive Bayes algorithm in PHP to perform sentiment analysis for Facebook posts.
+                    This application is built for Rahul Convent School as a freelancing project.
                 </p>
             </section>
             <section className="sections-content mt-3">
@@ -18,37 +18,31 @@ export default function ReckonModal(props) {
                 <div className="features-content py-2 px-3">
                     <div className="row my-2 py-1">
                         <div className="col-lg-2 col-md-4 col-sm-12">
-                            Job Recommendations
+                            Student Data Management
                         </div>
                         <div className="col-lg-10 col-md-8 col-sm-12">
                             <p>
-                                This feature recommends job suitable to user by taking a psychometric test and generating MBTI personality type.
-                            </p>
-                            <p>
-                                From the MBTI personality type, job recommendations are shown.
+                                Performs CURD operations on student data.
                             </p>
                         </div>
                     </div>
                     <div className="row my-2 py-1">
                         <div className="col-lg-2 col-md-4 col-sm-12">
-                            Sentiment Analysis
+                            Fee Transactions
                         </div>
                         <div className="col-lg-10 col-md-8 col-sm-12">
                             <p>
-                                Does sentiment analysis for facebook posts and shows how people reacted on that post.
-                            </p>
-                            <p>
-                                Implemented Naive Bayes Algorithm in PHP to perform Sentiment Analysis.
+                                Records student fees transactions.
                             </p>
                         </div>
                     </div>
                     <div className="row my-2 py-1">
                         <div className="col-lg-2 col-md-4 col-sm-12">
-                            Symptoms Analysis and Disease Prediction
+                            Queries
                         </div>
                         <div className="col-lg-10 col-md-8 col-sm-12">
                             <p>
-                                User inputs the symptoms he/she has and the system displays the probabilities of diseases he/she might have.
+                                Allows Management to execute queries like how much fee is paid between particular dates, how much fee is pending, list students did not pay fees.
                             </p>
                         </div>
                     </div>
@@ -62,16 +56,10 @@ export default function ReckonModal(props) {
                 <div className="features-content py-2 px-3">
                     <div className="row my-2 py-1">
                         <div className="col-auto">
-                            <SkillItem className='php' hideRating={true} skill='php'></SkillItem>
+                            <SkillItem className='java' hideRating={true} skill='java'></SkillItem>
                         </div>
                         <div className="col-auto">
-                            <SkillItem className='MySql' hideRating={true} skill='MySql'></SkillItem>
-                        </div>
-                        <div className="col-auto">
-                            <SkillItem className='html' hideRating={true} skill='html'></SkillItem>
-                        </div>
-                        <div className="col-auto">
-                            <SkillItem className='css' hideRating={true} skill='css'></SkillItem>
+                            <SkillItem className='sql' hideRating={true} skill='sql'></SkillItem>
                         </div>
                     </div>
                 </div>

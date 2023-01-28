@@ -1,14 +1,14 @@
-import { BlastString } from "../../../blast-string/blast-string";
-import { SkillItem } from "../../../skills-animation/skill-item/skill-item";
-export default function DataManagement(props) {
+import BlastString from "components/blast-string";
+import SkillItem from "components/skills-animation/skill-item";
+export default function ReckonModal(props) {
     return (
         <div className="modal-wrapper achat">
             <section className="project-description px-2">
                 <p>
-                    Achieved digitalization of data by implementing a desktop application that records student data, fee data, executes queries to display student, fee, audit information. Transformed manual record system to digital. 
+                    Achieved job prediction by taking a psychometric test and generating MBTI personality type.
                 </p>
                 <p>
-                    This application is built for Rahul Convent School as a freelancing project.
+                    Implemented Naive Bayes algorithm in PHP to perform sentiment analysis for Facebook posts.
                 </p>
             </section>
             <section className="sections-content mt-3">
@@ -18,31 +18,37 @@ export default function DataManagement(props) {
                 <div className="features-content py-2 px-3">
                     <div className="row my-2 py-1">
                         <div className="col-lg-2 col-md-4 col-sm-12">
-                            Student Data Management
+                            Job Recommendations
                         </div>
                         <div className="col-lg-10 col-md-8 col-sm-12">
                             <p>
-                                Performs CURD operations on student data.
+                                This feature recommends job suitable to user by taking a psychometric test and generating MBTI personality type.
+                            </p>
+                            <p>
+                                From the MBTI personality type, job recommendations are shown.
                             </p>
                         </div>
                     </div>
                     <div className="row my-2 py-1">
                         <div className="col-lg-2 col-md-4 col-sm-12">
-                            Fee Transactions
+                            Sentiment Analysis
                         </div>
                         <div className="col-lg-10 col-md-8 col-sm-12">
                             <p>
-                                Records student fees transactions.
+                                Does sentiment analysis for facebook posts and shows how people reacted on that post.
+                            </p>
+                            <p>
+                                Implemented Naive Bayes Algorithm in PHP to perform Sentiment Analysis.
                             </p>
                         </div>
                     </div>
                     <div className="row my-2 py-1">
                         <div className="col-lg-2 col-md-4 col-sm-12">
-                            Queries
+                            Symptoms Analysis and Disease Prediction
                         </div>
                         <div className="col-lg-10 col-md-8 col-sm-12">
                             <p>
-                                Allows Management to execute queries like how much fee is paid between particular dates, how much fee is pending, list students did not pay fees.
+                                User inputs the symptoms he/she has and the system displays the probabilities of diseases he/she might have.
                             </p>
                         </div>
                     </div>
@@ -56,10 +62,16 @@ export default function DataManagement(props) {
                 <div className="features-content py-2 px-3">
                     <div className="row my-2 py-1">
                         <div className="col-auto">
-                            <SkillItem className='java' hideRating={true} skill='java'></SkillItem>
+                            <SkillItem className='php' hideRating={true} skill='php'></SkillItem>
                         </div>
                         <div className="col-auto">
-                            <SkillItem className='sql' hideRating={true} skill='sql'></SkillItem>
+                            <SkillItem className='MySql' hideRating={true} skill='MySql'></SkillItem>
+                        </div>
+                        <div className="col-auto">
+                            <SkillItem className='html' hideRating={true} skill='html'></SkillItem>
+                        </div>
+                        <div className="col-auto">
+                            <SkillItem className='css' hideRating={true} skill='css'></SkillItem>
                         </div>
                     </div>
                 </div>

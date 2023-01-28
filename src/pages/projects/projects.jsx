@@ -1,7 +1,9 @@
 import React from 'react';
-import { BlastString } from '../../blast-string/blast-string';
-import ProjectCard from './project-card/project-card';
-import ProjectModal from './projects-modal/projects-modal';
+// import { BlastString } from '../../blast-string/blast-string';
+// import ProjectModal from './projects-modal/projects-modal';
+import BlastString from "components/blast-string";
+import ProjectCard from 'pages/projects/project-card/project-card';
+import ProjectModal from 'pages/projects/projects-modal/projects-modal';
 export default class ProjectsRoute extends React.Component {
     projects = [
         {

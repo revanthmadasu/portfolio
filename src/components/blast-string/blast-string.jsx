@@ -1,4 +1,4 @@
-import { BlastLetter } from "../blast-letter/blast-letter"
+import BlastLetter from "components/blast-letter"
 
 export const BlastString = (props) => {
     const tags = props.stringValue.split('').map(letter => {
