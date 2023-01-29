@@ -80,6 +80,18 @@ export const skills = {
             rating: 4.5,
             imgUrl: '',
             category: ['framework', 'unittesting']
+        },
+        {
+            skill: 'ngrx',
+            rating: 4,
+            imgUrl: '',
+            category: ['framework', 'frontend']
+        },
+        {
+            skill: 'cypress',
+            rating: 4,
+            imgUrl: '',
+            category: ['framework', 'testing', 'frontend']
         }
     ],
     databases: [

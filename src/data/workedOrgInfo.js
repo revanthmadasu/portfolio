@@ -36,7 +36,7 @@ export const WorkedOrgInfo = [
             "Implemented filter functionality to tables which brought search functionality to multiple pages",
             "Increased unit testing code coverage from 54% to 87% of a large module containing 12+ pages"
         ],
-        skills: ['angular', 'typescript', 'javascript', 'html', 'css', 'ngrx', 'jasmine', 'karma', 'cypress', 'git'],
+        skills: ['angular', 'typescript', 'javascript', 'html', 'css', 'ngrx', 'jasmine', 'cypress', 'git'],
         displayTechnologies: "Angular, Typescript, Javascript, HTML, CSS, NGRX, Jasmine, Karma, Cypress, Postman, GIT, Bitbucket, Jenkins, Azure Boards",
         orgLink: "https://www.thomsonreuters.com/",
         iconCss: "",

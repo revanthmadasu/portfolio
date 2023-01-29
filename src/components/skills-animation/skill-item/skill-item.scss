@@ -159,6 +159,19 @@
             background-image: url('/assets/img/skill-icons/git.svg');
         }
     }
+    &.ngrx {
+        background: linear-gradient(45deg, rgba(129, 71, 127, 0.4), transparent 100%);
+        .skill-badge-icon {
+            background-image: url('/assets/img/skill-icons/ngrx.svg');
+        }
+    }
+
+    &.cypress {
+        background: radial-gradient(ellipse at top, rgba(107, 235, 23, 0.2), transparent 100%);
+        .skill-badge-icon {
+            background-image: url('/assets/img/skill-icons/cypress.svg');
+        }
+    }
 }
 .MuiRating-root {
     font-size: 0.8rem !important;
