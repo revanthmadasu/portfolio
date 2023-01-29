@@ -18,6 +18,9 @@ export const WorkedOrg = (props) => {
             {orgInfo.description.map(description => <div className="my-2">
                 <span> {description} </span>
             </div>)}
+            {orgInfo.achievements.map(description => <div className="my-2 primary-text">
+                <span> {description} </span>
+            </div>)}
             <div className="my-2">
                 {skillTags}
             </div>

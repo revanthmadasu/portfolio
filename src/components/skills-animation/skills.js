@@ -80,6 +80,42 @@ export const skills = {
             rating: 4.5,
             imgUrl: '',
             category: ['framework', 'unittesting']
+        },
+        {
+            skill: 'ngrx',
+            rating: 4,
+            imgUrl: '',
+            category: ['framework', 'frontend']
+        },
+        {
+            skill: 'redux',
+            rating: 4.5,
+            imgUrl: '',
+            category: ['framework', 'library', 'frontend']
+        },
+        {
+            skill: 'next',
+            rating: 4,
+            imgUrl: '',
+            category: ['framework', 'frontend']
+        },
+        {
+            skill: 'jest',
+            rating: 4,
+            imgUrl: '',
+            category: ['framework', 'unittesting']
+        },
+        {
+            skill: 'jenkins',
+            rating: 4,
+            imgUrl: '',
+            category: ['devops']
+        },
+        {
+            skill: 'cypress',
+            rating: 4,
+            imgUrl: '',
+            category: ['framework', 'testing', 'frontend']
         }
     ],
     databases: [
@@ -113,7 +149,7 @@ export const skills = {
     libraries: [
         {
             skill: 'react',
-            rating: 3.5,
+            rating: 4.5,
             imgUrl: '',
             category: ['library', 'frontend']
         },

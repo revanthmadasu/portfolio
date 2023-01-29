@@ -1,7 +1,52 @@
 import ctSvg from "assets/img/experience/colortokensFull.svg";
 import trSvg from "assets/img/experience/thomson-reuters.svg";
-
+import swiggySvg from "assets/img/experience/swiggy.svg";
 export const WorkedOrgInfo = [
+    {
+        name: "Swiggy",
+        displayName: false,
+        timeline: "2022 February - 2022 December",
+        description: [
+            "Worked on Frontend for Swiggy App (consumer app) which has 10 Million+ downloads and millions of users",
+            "Worked on building pixel perfect user interfaces for swiggy application in desktop, mobile platforms that will be used by millions of users.",
+            "Worked on building independent webviews that can be embedded in swiggy mobile applications or independently hosted.",
+            "Worked as release manager actively working with QA, product managers and development teams, managing the release content, deploying and monitoring the prod behavior during release.",
+            "Worked as On Call actively monitoring the performance metrics, health of nodes, writing queries in new relic to debug prod errors, generating performance reports and charts, root cause analysis of pagerduty alerts",
+            "Closely worked with UX teams, product teams, product managers on critical product tasks that impact lakhs of users."
+        ],
+        achievements: [
+            "Independently built spotlight project for friendship day event activity called \"Roast Your Dost\" that has been used by 10lakh+ users.",
+            "Independently build and lead solutioning for spotlight project \"One Tap Add\" which enables single tap add membership feature Swiggy Loyalty program",
+            "Independently built Independent Webviews in Next framework which can be hosted and rendered in Android, iOS and web apps.",
+            "Implemented CI/CD workflows to get reports of package sizes, LHCI metrics, test coverage on the PRs.",
+            "Successfully resolved mutliple prod issues immediately with minimal impact on business"
+        ],
+        skills: ['react', 'redux', 'typescript', 'javascript', 'next', 'html', 'css', 'jest', 'cypress', 'git', 'jenkins'],
+        displayTechnologies: "Angular, Typescript, Javascript, HTML, CSS, NGRX, Jasmine, Karma, Cypress, Postman, GIT, Bitbucket, Jenkins, Azure Boards",
+        orgLink: "https://www.swiggy.com/",
+        iconCss: "",
+        svgComponent: swiggySvg
+    },
+    {
+        name: "Thomson Reuters",
+        displayName: false,
+        timeline: "2021 October - 2022 February",
+        description: [
+            "Work in fullstack development (frontend focussed) of legal applications, implementing designs from product managers, bug fixes, unit testing, code reviews etc.",
+            "Liaising with UX team, product managers, and UI team to implement product and technical designs.",
+            "Developing reusable components in the micro-frontend architecture, UI Development, API Integration, Unit testing, bug fixes, maintaining and improving existing codebases, and peer code reviews.",
+        ],
+        achievements: [
+            "Independently developed “Assembled Renditions” feature.",
+            "Implemented filter functionality to tables which brought search functionality to multiple pages",
+            "Increased unit testing code coverage from 54% to 87% of a large module containing 12+ pages"
+        ],
+        skills: ['angular', 'typescript', 'javascript', 'html', 'css', 'ngrx', 'jasmine', 'cypress', 'git'],
+        displayTechnologies: "Angular, Typescript, Javascript, HTML, CSS, NGRX, Jasmine, Karma, Cypress, Postman, GIT, Bitbucket, Jenkins, Azure Boards",
+        orgLink: "https://www.thomsonreuters.com/",
+        iconCss: "",
+        svgComponent: trSvg
+    },
     {
         name: "Colortokens",
         displayName: false,
@@ -22,24 +67,4 @@ export const WorkedOrgInfo = [
         iconCss: "",
         svgComponent: ctSvg
     },
-    {
-        name: "Thomson Reuters",
-        displayName: false,
-        timeline: "2021 October - 2022 February",
-        description: [
-            "Work in fullstack development (frontend focussed) of legal applications, implementing designs from product managers, bug fixes, unit testing, code reviews etc.",
-            "Liaising with UX team, product managers, and UI team to implement product and technical designs.",
-            "Developing reusable components in the micro-frontend architecture, UI Development, API Integration, Unit testing, bug fixes, maintaining and improving existing codebases, and peer code reviews.",
-        ],
-        achievements: [
-            "Independently developed “Assembled Renditions” feature.",
-            "Implemented filter functionality to tables which brought search functionality to multiple pages",
-            "Increased unit testing code coverage from 54% to 87% of a large module containing 12+ pages"
-        ],
-        skills: ['angular', 'typescript', 'javascript', 'html', 'css', 'ngrx', 'jasmine', 'karma', 'cypress', 'git'],
-        displayTechnologies: "Angular, Typescript, Javascript, HTML, CSS, NGRX, Jasmine, Karma, Cypress, Postman, GIT, Bitbucket, Jenkins, Azure Boards",
-        orgLink: "https://www.thomsonreuters.com/",
-        iconCss: "",
-        svgComponent: trSvg
-    }
 ];
