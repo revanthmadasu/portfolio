@@ -1,26 +1,31 @@
 import ctSvg from "assets/img/experience/colortokensFull.svg";
 import trSvg from "assets/img/experience/thomson-reuters.svg";
-
+import swiggySvg from "assets/img/experience/swiggy.svg";
 export const WorkedOrgInfo = [
     {
-        name: "Colortokens",
+        name: "Swiggy",
         displayName: false,
-        timeline: "2019 August - 2021 October",
+        timeline: "2022 February - 2022 December",
         description: [
-            "Work in frontend development of new applications from scratch, new features, and maintenance of the existing scalable web application with utmost quality.",
-            "Liaising with UX team, product managers, and UI team to implement product and technical designs.",
-            "Developing reusable components in the micro-frontend architecture, UI Development, API Integration, Unit testing, bug fixes, maintaining and improving existing codebases, and peer code reviews.",
+            "Worked on Frontend for Swiggy App (consumer app) which has 10 Million+ downloads and millions of users",
+            "Worked on building pixel perfect user interfaces for swiggy application in desktop, mobile platforms that will be used by millions of users.",
+            "Worked on building independent webviews that can be embedded in swiggy mobile applications or independently hosted.",
+            "Worked as release manager actively working with QA, product managers and development teams, managing the release content, deploying and monitoring the prod behavior during release.",
+            "Worked as On Call actively monitoring the performance metrics, health of nodes, writing queries in new relic to debug prod errors, generating performance reports and charts, root cause analysis of pagerduty alerts",
+            "Closely worked with UX teams, product teams, product managers on critical product tasks that impact lakhs of users."
         ],
         achievements: [
-            "Developed multiple core features of the application with a smooth responsive design which are being used by various security admins.",
-            "Led UI development teams effectively with planning (architecture, API design, work assignment, coordinating with UX teams), implementation along with individual development contribution.",
-            "Successfully refactored the application which helped us achieve a robust application that made development processes quicker and bugless."
+            "Independently built spotlight project for friendship day event activity called \"Roast Your Dost\" that has been used by 10lakh+ users.",
+            "Independently build and lead solutioning for spotlight project \"One Tap Add\" which enables single tap add membership feature Swiggy Loyalty program",
+            "Independently built Independent Webviews in Next framework which can be hosted and rendered in Android, iOS and web apps.",
+            "Implemented CI/CD workflows to get reports of package sizes, LHCI metrics, test coverage on the PRs.",
+            "Successfully resolved mutliple prod issues immediately with minimal impact on business"
         ],
-        skills: ['angular', 'typescript', 'javascript', 'jasmine', 'html', 'css', 'bootstrap', 'git'],
-        displayTechnologies: "Angular, Typescript, Javascript, D3, Karma, HTML5, SCSS, Bootstrap, Git, Postman, Atlassian, Clusman, Kubectl.",
-        orgLink: "https://colortokens.com",
+        skills: ['react', 'redux', 'typescript', 'javascript', 'next', 'html', 'css', 'jest', 'cypress', 'git', 'jenkins'],
+        displayTechnologies: "Angular, Typescript, Javascript, HTML, CSS, NGRX, Jasmine, Karma, Cypress, Postman, GIT, Bitbucket, Jenkins, Azure Boards",
+        orgLink: "https://www.swiggy.com/",
         iconCss: "",
-        svgComponent: ctSvg
+        svgComponent: swiggySvg
     },
     {
         name: "Thomson Reuters",
@@ -41,5 +46,25 @@ export const WorkedOrgInfo = [
         orgLink: "https://www.thomsonreuters.com/",
         iconCss: "",
         svgComponent: trSvg
-    }
+    },
+    {
+        name: "Colortokens",
+        displayName: false,
+        timeline: "2019 August - 2021 October",
+        description: [
+            "Work in frontend development of new applications from scratch, new features, and maintenance of the existing scalable web application with utmost quality.",
+            "Liaising with UX team, product managers, and UI team to implement product and technical designs.",
+            "Developing reusable components in the micro-frontend architecture, UI Development, API Integration, Unit testing, bug fixes, maintaining and improving existing codebases, and peer code reviews.",
+        ],
+        achievements: [
+            "Developed multiple core features of the application with a smooth responsive design which are being used by various security admins.",
+            "Led UI development teams effectively with planning (architecture, API design, work assignment, coordinating with UX teams), implementation along with individual development contribution.",
+            "Successfully refactored the application which helped us achieve a robust application that made development processes quicker and bugless."
+        ],
+        skills: ['angular', 'typescript', 'javascript', 'jasmine', 'html', 'css', 'bootstrap', 'git'],
+        displayTechnologies: "Angular, Typescript, Javascript, D3, Karma, HTML5, SCSS, Bootstrap, Git, Postman, Atlassian, Clusman, Kubectl.",
+        orgLink: "https://colortokens.com",
+        iconCss: "",
+        svgComponent: ctSvg
+    },
 ];
