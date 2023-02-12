@@ -1,6 +1,6 @@
 import './App.scss';
 import  React from 'react';
-import { BrowserRouter as Router, Route, Switch,  Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch,  Navigate, Routes } from "react-router-dom";
 import NavBar from 'components/NavBar';
 import SkillsRoute from 'pages/skills';
 import HomeRoute from 'pages/home';
@@ -21,18 +21,13 @@ export class App extends React.Component {
       <React.Fragment>
         <Router>
           <NavBar />
-              <Switch>
-                <Route path="/home" component={HomeRoute} />
-                <Route path="/skills" component={SkillsRoute} />
-                <Route path="/projects" component={ProjectsRoute}></Route>
-                <Route path="/experience" component={ExperienceRoute}></Route>
-                <Route exact path="/">
-                  <Redirect to="/home" /> : <HomeRoute />
-                </Route>
-                <Route>
-                  <Redirect to="/home" /> : <HomeRoute />
-                </Route>
-              </Switch>
+              <Routes>
+                <Route path="/home" element={<HomeRoute />} />
+                <Route path="/skills" element={<SkillsRoute />} />
+                <Route path="/projects" element={<ProjectsRoute />}></Route>
+                <Route path="/experience" element={<ExperienceRoute />}></Route>
+                <Route path="/*" element={<Navigate replace to="/home"/>} />
+              </Routes>
         </Router>
       </React.Fragment>
     );
