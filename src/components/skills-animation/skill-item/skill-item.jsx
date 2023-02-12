@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Rating } from '@material-ui/lab'
+import { Rating } from '@mui/lab'
 import './skill-item.scss';
 export function SkillItem(props) {
     return (
