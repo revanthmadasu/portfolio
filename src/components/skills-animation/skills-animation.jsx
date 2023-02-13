@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { skills } from './skills';
+import { skills } from '../../data/skills';
 import SkillItem from './skill-item';
 import './skills-animation.scss';
 import BlastString from '../blast-string';

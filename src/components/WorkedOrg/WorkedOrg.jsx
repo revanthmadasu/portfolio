@@ -1,5 +1,6 @@
 import SkillItem from "components/skills-animation/skill-item";
 import React, {Component} from "react";
+import { getFormattedTag } from "stripts/utils";
 import OrgIcon from "./OrgIcon";
 import './WorkedOrg.scss';
 
@@ -15,11 +16,8 @@ export const WorkedOrg = (props) => {
                     <span className="align-middle timeline col-sm-8 col-md-9 col-lg-9 px-lg-2 px-md-4 mt-2">{orgInfo.timeline}</span>
                 </span>
             </div>
-            {orgInfo.description.map(description => <div className="my-2">
-                <span> {description} </span>
-            </div>)}
-            {orgInfo.achievements.map(description => <div className="my-2 primary-text">
-                <span> {description} </span>
+            {[...orgInfo.description, ...orgInfo.achievements].map(description => <div className="my-2">
+                <span> {getFormattedTag(description)} </span>
             </div>)}
             <div className="my-2">
                 {skillTags}

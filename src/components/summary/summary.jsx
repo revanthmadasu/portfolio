@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import { getHighlighted } from 'stripts/utils';
 import { BlastString } from '../blast-string/blast-string';
 import './summary.scss';
 export function Summary() {
-    const summaryDesc1 = `I'm a passionate software developer with the main area of expertise in frontend development.
-     Building applications that solve real-world problems is what drives me.`;
-    const sumaryDesc2 = `Problem solver, team player, constant learner, and result-oriented person. I never compromise on the quality of work and take pride in my work.`;
-    const summaryDesc3 = `Apart from front-end development, I'm interested in FullStack and Machine Learning roles.`;
-    const summaryDesc4 = `In the early stage of my career and looking for a great engineering team that would kick start my career.`;
-    const summaryDesc5 = `I'm open to relocate to any place in the world and prefer remote employment.`;
+    const summaryDesc = [
+        "Proven software developer with 3+ years experience at top tier product based companies",
+        "Experienced in building consumer applications with {{100 Million+}} downloads that require {{high uptime}}, and {{pixel-perfect UI}}",
+        "Experienced in working with startup organizations of small size and large enterprise organizations.",
+        "Expertise in Frontend Technologies: Typescript, Javascript, React, Redux, Angular, NGRX, Cloud Technologies: GCP, AWS",
+        "Experienced in production support of application with {{160000+}} restaurant partners {{1 million+}} weekly orders.",
+        "Problem solver, team player, constant learner, and result-oriented person. I never compromise on the quality of work and take pride in my work.",
+    ];
+    const summaryDescTags = summaryDesc.map(desc => <p dangerouslySetInnerHTML={{__html: getHighlighted(desc)}}/>);
     return (
         <React.Fragment>
             <div className="w3-animate-right">
@@ -33,21 +37,7 @@ export function Summary() {
                     </div>
                 </div>
                 <div className="section-content">
-                    <p>
-                        {summaryDesc1}
-                    </p>
-                    <p>
-                        {sumaryDesc2}
-                    </p>
-                    <p>
-                        {summaryDesc3}
-                    </p>
-                    <p>
-                        {summaryDesc4}
-                    </p>
-                    <p>
-                        {summaryDesc5}
-                    </p>
+                    {summaryDescTags}
                 </div>
             </div>
         </React.Fragment>

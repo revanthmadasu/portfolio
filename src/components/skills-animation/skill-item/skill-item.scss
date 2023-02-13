@@ -194,6 +194,12 @@
             background-image: url('/assets/img/skill-icons/cypress.svg');
         }
     }
+    &.newrelic {
+        background: radial-gradient(ellipse at top, rgba(107, 235, 23, 0.2), transparent 100%);
+        .skill-badge-icon {
+            background-image: url('/assets/img/skill-icons/newrelic.svg');
+        }
+    }
 }
 .MuiRating-root {
     font-size: 0.8rem !important;

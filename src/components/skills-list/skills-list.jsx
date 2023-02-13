@@ -22,7 +22,7 @@ export function SkillsList() {
                             </span>
                         </div>
                         <div className="col-lg-10 col-md-10 col-xl-10 col-sm-8">
-                            <span>Angular, Spring Boot, Express, Android Studio, Jasmine.</span>
+                            <span>Angular, NGRX, React, Redux, Next, Spring Boot, Express, Android Studio, Jasmine, Jest.</span>
                         </div>
                     </div>
                     <div className="row py-2">
@@ -42,7 +42,7 @@ export function SkillsList() {
                             </span>
                         </div>
                         <div className="col-lg-10 col-md-10 col-xl-10 col-sm-8">
-                            <span>Scikit-Learn, Numpy, Pandas, Matplotlib, Seaborn, CSS, Bootstrap, React, React Native.</span>
+                            <span>CSS, Bootstrap, Scikit-Learn, Numpy, Pandas, Matplotlib, Seaborn</span>
                         </div>
                     </div>
                     <div className="row py-2">
@@ -52,7 +52,7 @@ export function SkillsList() {
                             </span>
                         </div>
                         <div className="col-lg-10 col-md-10 col-xl-10 col-sm-8">
-                            <span>GCP, REST, Git, Data Structures and Algorithms, Design Patterns, Machine Learning.</span>
+                            <span>GCP, New Relic, REST, Git, CI/CD, Jenkins, Data Structures and Algorithms, Design Patterns, Machine Learning.</span>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ export function SkillsList() {
                         The main area of my expertise is front-end development.  
                     </p>
                     <p>
-                        Building enterprise, scalable web applications with Angular, HTML, CSS, Javascript using different design patterns and approaches.
+                        Building enterprise, scalable web applications with Angular, React, Next, HTML, CSS, Javascript using different design patterns and approaches.
                     </p>
                     <p>
                         I also have expertise in full-stack development with spring, MEA(R)N stack.

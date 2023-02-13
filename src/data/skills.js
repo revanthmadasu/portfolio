@@ -185,5 +185,12 @@ export const skills = {
             imgUrl: '',
             category: ['version-control', 'command-line']
         }
+    ],
+    tools: [
+        {
+            skill: 'newrelic',
+            rating: 3.5,
+            category: ['tools', 'monitoring']
+        }
     ]
 }
