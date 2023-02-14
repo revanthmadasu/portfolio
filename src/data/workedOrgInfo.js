@@ -37,7 +37,7 @@ export const WorkedOrgInfo = [
             "Developing reusable components in the micro-frontend architecture, UI Development, API Integration, Unit testing, bug fixes, maintaining and improving existing codebases, and peer code reviews.",
         ],
         achievements: [
-            "Independently developed {***text=“Assembled Renditions”;type=bold***} feature.",
+            "Independently developed {***text=Assembled Renditions;type=bold***} feature.",
             "Implemented filter functionality to tables which brought search functionality to multiple pages",
             "Increased unit testing code coverage from 54% to 87% of a large module containing 12+ pages"
         ],
@@ -55,12 +55,13 @@ export const WorkedOrgInfo = [
             "Work in frontend development of new applications from scratch, new features, and maintenance of the existing scalable web application with utmost quality.",
             "Liaising with UX team, product managers, and UI team to implement product and technical designs.",
             "Developing reusable components in the micro-frontend architecture, UI Development, API Integration, Unit testing, bug fixes, maintaining and improving existing codebases, and peer code reviews.",
-            "Production support responsibilities which includes responsibilities like prod bug fixes, resolving system outages, point of contact for different UI team"
+            "{***text=Production support;type=bold***} responsibilities which includes responsibilities like prod bug fixes, resolving system outages, point of contact for different UI team"
         ],
         achievements: [
             "Developed multiple core features of the application with a smooth responsive design which are being used by various security admins.",
-            "Developed {***text=Policy Builder;type=bold***} feature single handedly which allows to create access policies between different groups",
-            "Led UI development teams effectively with planning (architecture, API design, work assignment, coordinating with UX teams), implementation along with individual development contribution.",
+            "{***text=Architected;type=bold***} and Developed {***text=Policy Builder;type=bold***} feature single handedly which is main feature of the application that allows to create access policies (what type of communication should be allowed) between different groups",
+            "Worked on customer specific projects which need special use case implementation in strict deadlines. This particular project {***text=UserAccess Group;type=bold***} bagged a 2 years contract with a customer which is developed in a very short span of two weeks",
+            "{***text=Led UI development teams;type=bold***} effectively with planning (architecture, API design, work assignment, coordinating with UX teams), implementation along with individual development contribution.",
             "Successfully refactored the application which helped us achieve a robust application that made development processes quicker and bugless."
         ],
         skills: ['angular', 'typescript', 'javascript', 'jasmine', 'html', 'css', 'bootstrap', 'git'],
