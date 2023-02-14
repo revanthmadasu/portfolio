@@ -13,6 +13,10 @@
     .card-thumbnail {        
         width: 190px;
         height: 180px;
+        &-mobile {
+            width: 100px;
+            height: 100px;
+        }
     }
     .project-title {
         color: rgba(255,255,255,0.7);
