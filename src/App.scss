@@ -60,7 +60,7 @@
   padding-top: $nav-height-desktop;
 }
 .nav-container-mobile+div {
-  // any container level styling for mobile devices goes here
+  padding-bottom: $nav-height-mobile;
 }
 @keyframes scrollBtnBounce {
   from {
