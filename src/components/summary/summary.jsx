@@ -18,7 +18,7 @@ export function Summary() {
                 <h5 className="section-title p-2">
                     <BlastString stringValue="About"></BlastString>
                 </h5>
-                <div className="container-fluid my-4 py-2 rounded-box">
+                <div className="d-flex flex-wrap justify-space-evenly my-4 py-2 rounded-box">
                     <div className="badge blue-dark">
                         <div className="circle"> <i className="fa fa-rocket"></i></div>
                         <div className="ribbon">Problem Solver</div>
@@ -36,7 +36,7 @@ export function Summary() {
                         <div className="ribbon">Team Work</div>
                     </div>
                 </div>
-                <div className="section-content">
+                <div className="section-content px-3 px-lg-0 px-sm-3">
                     {summaryDescTags}
                 </div>
             </div>
