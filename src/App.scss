@@ -16,6 +16,7 @@
   animation-duration: 0s;
   animation-fill-mode: both;
   animation-iteration-count:1;
+  margin: auto;
   &:hover {
     transform: scale(1.05);
     transition-duration: 0.2s;
@@ -53,8 +54,13 @@
 }
 .nav-container+div {
   overflow-x: hidden !important;
+}
+.nav-container-desktop+div {
   padding: 30px;
-  padding-top: $nav-height;
+  padding-top: $nav-height-desktop;
+}
+.nav-container-mobile+div {
+  padding-bottom: $nav-height-mobile;
 }
 @keyframes scrollBtnBounce {
   from {

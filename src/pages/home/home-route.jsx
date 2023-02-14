@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import BlastLetter from 'components/blast-letter';
 import Summary from 'components/summary';
+import classNames from 'classnames';
+import { isMobile } from 'react-device-detect';
+import "./home-route.scss";
 export class HomeRoute extends Component {
     constructor() {
         super();
@@ -92,18 +95,36 @@ export class HomeRoute extends Component {
         this.state.showSkills = true;
         this.setState(this.state);
       }
+    imageIntroContainerClass = classNames("image-intro-container", {
+        "d-flex": isMobile,
+        "py-3": isMobile
+    });
+    imageContainerClass = classNames({
+        "image-container-mobile": isMobile,
+        "image-container-desktop": !isMobile
+    });
+    introMsgContainerClass = classNames({
+      "intro-msg-container-mobile": isMobile,
+      "intro-msg-container-desktop": !isMobile
+    });
     render() {    
         return (
             <div className="intro-section h-100 overflow-auto custom-scroll">
                 <div className="row">
                 <div className="col-xs-12 col-sm-12 col-lg-12 col-xl-6 col-md-12 w3-animate-left">
-                    {
-                    this.state.image && 
-                    <div className="profile-pic rounded-circle m-lg-5"></div>
-                    }
-                    <h1 className="my-3 m-lg-5 m-sm-3 my-sm-3">
-                    {this.state.tags}
-                    </h1>
+                  <div className={this.imageIntroContainerClass}>
+                    <div className={this.imageContainerClass}>
+                        {
+                            this.state.image && 
+                            <div className="profile-pic rounded-circle m-lg-5"></div>
+                        }
+                    </div>
+                    <div className={this.introMsgContainerClass}>
+                        <h1 className="my-3 m-lg-5 m-sm-3 my-sm-3">
+                            {this.state.tags}
+                        </h1>
+                    </div>
+                  </div>
                 </div>
                 <div className="col-xs-12 col-sm-12 col-xl-6 col-lg-12 col-md-12">
                     <div className="about-section pt-lg-5 pb-lg-4 px-lg-3 dark-rounded-box">

@@ -1,18 +1,16 @@
 /* Smartphones (portrait and landscape) ----------- */
-$profile_pic_size: 10px;
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles */
     h1 {
         font-size: 1.45em;
     }
-    $profile_pic_size: 100px;
     @keyframes popUp2 {
         from {
           width: 0px;
           height: 0px;
         }
         to {
-          width:100px;
+          width: 100px;
           height: 100px;
         }
       }
@@ -37,7 +35,6 @@ $profile_pic_size: 10px;
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     /* Styles */
-    $profile_pic_size: 125px;
     @keyframes popUp2 {
         from {
           width: 0px;
@@ -112,7 +109,6 @@ $profile_pic_size: 10px;
 /* Desktops and laptops ----------- */
 @media only screen and (min-width : 1224px) {
     /* Styles */
-    $profile_pic_size: 250px;
     @keyframes popUp2 {
         from {
           width: 0px;

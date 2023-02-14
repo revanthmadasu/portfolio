@@ -1,12 +1,17 @@
+import classNames from 'classnames';
 import React from 'react';
+import { isMobile } from 'react-device-detect';
 import  './project-card.scss';
 export default function ProjectCard(props) {
     function openModal() {
         props.onOpenModal(props.project, props.parent);
     }
+    const cardThumbnailClass = classNames("card-thumbnail", "m-auto", {
+        "card-thumbnail-mobile": isMobile
+    });
     return(<React.Fragment>
         <div className="d-inline-block card-container position-relative" onClick={() => openModal()}>
-            <div className="card-thumbnail">
+            <div className={cardThumbnailClass}>
                 <span className="background d-inline-block w-100 h-100">
                     {
                         props.project.title === 'Reckon' && <span className="image-bg reckon-bg d-inline-block h-100 w-100"></span>

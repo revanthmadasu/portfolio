@@ -6,7 +6,9 @@
 	margin: auto;
 }
 
-
+.badges-container {
+	justify-content: space-evenly;
+}
 .badge {
 	position: relative;
 	margin: 1.5em 3em;
