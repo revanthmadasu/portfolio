@@ -1,5 +1,7 @@
+import classNames from "classnames";
 import SkillItem from "components/skills-animation/skill-item";
 import React, {Component} from "react";
+import { isMobile } from "react-device-detect";
 import { getFormattedTag } from "stripts/utils";
 import OrgIcon from "./OrgIcon";
 import './WorkedOrg.scss';
@@ -7,9 +9,11 @@ import './WorkedOrg.scss';
 export const WorkedOrg = (props) => {
     const { orgInfo } = props;
     const skillTags = orgInfo.skills.map(skill => <SkillItem hideRating={true} skill={skill}></SkillItem>);
-
+    const containerClass = classNames("org-container rounded-box p-3 mx-1 my-4", {
+        "org-container-mobile": isMobile
+    });
     return <>
-        <div className="rounded-box p-3 mx-1 my-4">
+        <div className={containerClass}>
             <div className="mb-3">
                 <span className="row">
                     {<OrgIcon {...orgInfo} ></OrgIcon>}
