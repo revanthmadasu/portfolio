@@ -1,8 +1,14 @@
 @import "../../styles/variables";
 .nav-container {
     background: radial-gradient(ellipse at top, #000, 20%, transparent 60%);
-    height: $nav-height;
     z-index: 20;
-    top: 0px;
     backdrop-filter: blur(5px);
+    &-desktop {
+        height: $nav-height-desktop;
+        top: 0px;
+    }
+    &-mobile {
+        height: $nav-height-mobile;
+        bottom: 0px;
+    }
 }
