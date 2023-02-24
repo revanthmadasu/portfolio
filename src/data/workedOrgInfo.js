@@ -61,6 +61,7 @@ export const WorkedOrgInfo = [
             "Developed multiple core features of the application with a smooth responsive design which are being used by various security admins.",
             "{***text=Architected;type=bold***} and Developed {***text=Policy Builder;type=bold***} feature single handedly which is main feature of the application that allows to create access policies (what type of communication should be allowed) between different groups",
             "Worked on customer specific projects which need special use case implementation in strict deadlines. This particular project {***text=UserAccess Group;type=bold***} bagged a 2 years contract with a customer which is developed in a very short span of two weeks",
+            "{***text=Architected;type=bold***} and Implemented role based access control {***text=(RBAC);type=bold***} from UI side. Different workflows for different types of users like security admin, policy admin, asset admin, view only.",
             "{***text=Led UI development teams;type=bold***} effectively with planning (architecture, API design, work assignment, coordinating with UX teams), implementation along with individual development contribution.",
             "Successfully refactored the application which helped us achieve a robust application that made development processes quicker and bugless."
         ],
