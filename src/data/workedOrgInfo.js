@@ -21,7 +21,7 @@ export const WorkedOrgInfo = [
             "Implemented {***text=CI/CD;type=bold***} workflows to get reports of package sizes, {***text=LHCI metrics;type=bold***}, test coverage on the PRs.",
             "Successfully resolved mutliple {***text=prod issues;type=bold***} immediately with minimal impact on business"
         ],
-        skills: ['react', 'redux', 'typescript', 'javascript', 'next', 'html', 'css', 'jest', 'cypress', 'git', 'jenkins'],
+        skills: ['react', 'redux', 'typescript', 'javascript', 'next', 'html', 'css', 'jest', 'cypress', 'git', 'jenkins', 'newrelic'],
         displayTechnologies: "Angular, Typescript, Javascript, HTML, CSS, NGRX, Jasmine, Karma, Cypress, Postman, GIT, Bitbucket, Jenkins, Azure Boards",
         orgLink: "https://www.swiggy.com/",
         iconCss: "",
