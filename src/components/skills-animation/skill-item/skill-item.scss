@@ -16,25 +16,29 @@
     &.java {
         background: linear-gradient(180deg, rgba(255, 0, 0, 0.17), rgba(0, 0, 255, 0.18) 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/java.svg');
+            // background-image: url('/assets/img/skill-icons/java.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279487/portfolio-project/skill-icons/java_owshha.svg');
         }
     }
     &.angular {
         background: linear-gradient(45deg, rgba(255, 0, 0, 0.2), rgba(0, 0, 0, 0.1) 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/angular.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279484/portfolio-project/skill-icons/angular_dhdi40.svg');
+            // background-image: url('/assets/img/skill-icons/angular.svg');
         }
     }
     &.javascript {
         background: linear-gradient(45deg, rgba(255, 255, 0, 0.1), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/javascript.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279487/portfolio-project/skill-icons/javascript_kpzvfb.svg');
+            // background-image: url('/assets/img/skill-icons/javascript.svg');
         }
     }
     &.typescript {
         background: linear-gradient(45deg, rgba(0, 170, 255, 0.2), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/typescript.svg');
+            // background-image: url('/assets/img/skill-icons/typescript.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279489/portfolio-project/skill-icons/typescript_gw2omp.svg');
         }
     }
     &.python {
@@ -46,73 +50,85 @@
     &.c {
         background: linear-gradient(150deg, rgba(70, 70, 100, 0.3), rgba(0, 0, 200, 0.3) 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/c.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279484/portfolio-project/skill-icons/c_r7lbx9.svg');
+            // background-image: url('/assets/img/skill-icons/c.svg');
         }
     }
     &.php {
         background: radial-gradient(circle at bottom, rgba(70, 70, 200, 0.4), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/php.svg');
+            // background-image: url('/assets/img/skill-icons/php.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279487/portfolio-project/skill-icons/php_yid5ov.svg');
         }
     }
     &.sql {
         background: radial-gradient(ellipse at top, rgba(255, 255, 0, 0.3), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/sql.svg');
+            // background-image: url('/assets/img/skill-icons/sql.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279489/portfolio-project/skill-icons/sql_mqskax.svg');
         }
     }
     &.html {
         background: radial-gradient(ellipse at top, rgba(255, 0, 0, 0.3), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/html.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279486/portfolio-project/skill-icons/html_ccxisv.svg');
+            // background-image: url('/assets/img/skill-icons/html.svg');
         }
     }
     &.spring {
         background: radial-gradient(ellipse at top, rgba(107, 235, 23, 0.2), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/spring.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279489/portfolio-project/skill-icons/spring_dfttpa.svg');
+            // background-image: url('/assets/img/skill-icons/spring.svg');
         }
     }
     &.express {
         background: linear-gradient(150deg, rgba(66, 18, 117, 0.3), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/express-js.svg');
+            // background-image: url('/assets/img/skill-icons/express-js.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279485/portfolio-project/skill-icons/express-js_uayrro.svg');
         }
     }
     &.android {
         background: radial-gradient(circle at top, rgba(113, 216, 140, 0.15), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/android.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279484/portfolio-project/skill-icons/android_bbu2qe.svg');
+            // background-image: url('/assets/img/skill-icons/android.svg');
+        }
+    }
+    &.jasmine {
+        background: linear-gradient(45deg, rgba(129, 71, 127, 0.4), transparent 100%);
+        .skill-badge-icon {
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279486/portfolio-project/skill-icons/jasmine_fhqkrh.svg');
+            // background-image: url('/assets/img/skill-icons/jasmine.svg');
         }
     }
     &.jasmine {
         background: linear-gradient(45deg, rgba(129, 71, 127, 0.4), transparent 100%);
         .skill-badge-icon {
             background-image: url('/assets/img/skill-icons/jasmine.svg');
-        }
-    }
-    &.jasmine {
-        background: linear-gradient(45deg, rgba(129, 71, 127, 0.4), transparent 100%);
-        .skill-badge-icon {
             background-image: url('/assets/img/skill-icons/jasmine.svg');
         }
     }
     &.MySql {
         background: linear-gradient(45deg, rgba(0, 170, 255, 0.2), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/mysql.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279487/portfolio-project/skill-icons/mysql_yh2oc7.svg');
+            // background-image: url('/assets/img/skill-icons/mysql.svg');
         }
     }
     &.MongoDB {
         background: linear-gradient(0deg, rgba(97, 162, 72, 0.15), rgba(91, 150, 66, 0.15) 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/mongodb.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279487/portfolio-project/skill-icons/mongodb_ke0piv.svg');
+            // background-image: url('/assets/img/skill-icons/mongodb.svg');
         }
     }
     &.firebase {
         background: linear-gradient(0deg, rgba(244, 163, 58, 0.15), rgba(248, 202, 79, 0.15) 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/firebase.svg');
+            // background-image: url('/assets/img/skill-icons/firebase.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279485/portfolio-project/skill-icons/firebase_ezoniz.svg');
         }
     }
     &.GCP {
@@ -120,84 +136,98 @@
          linear-gradient(180deg, rgba(247, 20, 24, 0.15) 30%, rgba(28, 185, 62, 0.15) 90%)
         ;
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/gcp.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279485/portfolio-project/skill-icons/gcp_ja88mj.svg');
+            // background-image: url('/assets/img/skill-icons/gcp.svg');
         }
     }
     &.react {
         background: radial-gradient(circle at center, rgba(128, 216, 247, 0.25), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/react.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279489/portfolio-project/skill-icons/scikitlearn_bhcwe3.svg');
+            // background-image: url('/assets/img/skill-icons/react.svg');
         }
     }
     &.scikit {
         background: linear-gradient(90deg, rgba(79, 153, 200, 0.15) 10%, rgba(236, 156, 78, 0.15) 50%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/scikitlearn.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279489/portfolio-project/skill-icons/scikitlearn_bhcwe3.svg');
+            // background-image: url('/assets/img/skill-icons/scikitlearn.svg');
         }
     }
     &.seaborn {
         background: radial-gradient(circle at top, rgba(69, 74, 115, 0.6) 20%, transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/seaborn.svg');
+            // background-image: url('/assets/img/skill-icons/seaborn.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279489/portfolio-project/skill-icons/seaborn_rweyxa.svg');
         }
     }
     &.css {
         background: radial-gradient(circle at top, rgba(49, 115, 177, 0.5)  , transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/css.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279484/portfolio-project/skill-icons/css_qk42hv.svg');
+            // background-image: url('/assets/img/skill-icons/css.svg');
         }
     }
     &.bootstrap {
         background: linear-gradient(90deg, rgba(87, 70, 126, 0.5) 20%, rgba(87, 70, 126, 0.2) 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/bootstrap.svg');
+            // background-image: url('/assets/img/skill-icons/bootstrap.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279484/portfolio-project/skill-icons/bootstrap_tmngyc.svg');
         }
     }
     &.git {
         background: radial-gradient(ellipse at top, rgba(255, 0, 0, 0.3), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/git.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279486/portfolio-project/skill-icons/git_l1j79q.svg');
+            // background-image: url('/assets/img/skill-icons/git.svg');
         }
     }
     &.ngrx {
         background: linear-gradient(45deg, rgba(129, 71, 127, 0.4), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/ngrx.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279482/portfolio-project/skill-icons/ngrx_ncokra.svg');
+            // background-image: url('/assets/img/skill-icons/ngrx.svg');
         }
     }
     &.redux {
         background: linear-gradient(45deg, rgba(129, 71, 127, 0.4), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/redux.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279484/portfolio-project/skill-icons/redux_k99hky.svg');
+            // background-image: url('/assets/img/skill-icons/redux.svg');
         }
     }
     &.next {
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/next.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279482/portfolio-project/skill-icons/next_byilpf.svg');
+            // background-image: url('/assets/img/skill-icons/next.svg');
         }
     }
     &.jest {
         background: radial-gradient(ellipse at top, rgba(255, 0, 0, 0.3), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/jest.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279482/portfolio-project/skill-icons/jest_nltetv.svg');
+            // background-image: url('/assets/img/skill-icons/jest.svg');
         }
     }
     &.jenkins {
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/jenkins.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279483/portfolio-project/skill-icons/jenkins_yltbks.svg');
+            // background-image: url('/assets/img/skill-icons/jenkins.svg');
         }
     }
 
     &.cypress {
         background: radial-gradient(ellipse at top, rgba(107, 235, 23, 0.2), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/cypress.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279482/portfolio-project/skill-icons/cypress_bfcwcj.svg');
+            // background-image: url('/assets/img/skill-icons/cypress.svg');
         }
     }
     &.newrelic {
         background: radial-gradient(ellipse at top, rgba(107, 235, 23, 0.2), transparent 100%);
         .skill-badge-icon {
-            background-image: url('/assets/img/skill-icons/newrelic.svg');
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1684279482/portfolio-project/skill-icons/newrelic_vz29k0.svg');
+            // background-image: url('/assets/img/skill-icons/newrelic.svg');
         }
     }
 }

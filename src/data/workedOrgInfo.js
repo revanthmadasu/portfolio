@@ -1,6 +1,11 @@
-import ctSvg from "assets/img/experience/colortokensFull.svg";
-import trSvg from "assets/img/experience/thomson-reuters.svg";
-import swiggySvg from "assets/img/experience/swiggy.svg";
+// import ctSvg from "assets/img/experience/colortokensFull.svg";
+// import trSvg from "assets/img/experience/thomson-reuters.svg";
+// import swiggySvg from "assets/img/experience/swiggy.svg";
+
+const ctSvg = "https://res.cloudinary.com/revanthm/image/upload/v1684279011/portfolio-project/experience/colortokensFull_fxybt5.svg";
+const swiggySvg = "https://res.cloudinary.com/revanthm/image/upload/v1684279010/portfolio-project/experience/swiggy_tbhq8e.svg";
+const trSvg = "https://res.cloudinary.com/revanthm/image/upload/v1684279012/portfolio-project/experience/thomson-reuters_ekdumm.svg";
+
 export const WorkedOrgInfo = [
     {
         name: "Swiggy",
