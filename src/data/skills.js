@@ -116,6 +116,12 @@ export const skills = {
             rating: 4,
             imgUrl: '',
             category: ['framework', 'testing', 'frontend']
+        },
+        {
+            skill: 'wxPython',
+            rating: 3.5,
+            imgUrl: '',
+            category: ['framework', 'toolkit', 'frontend']
         }
     ],
     databases: [
