@@ -230,6 +230,14 @@
             // background-image: url('/assets/img/skill-icons/newrelic.svg');
         }
     }
+    &.wxPython {
+        background: linear-gradient(90deg, rgba(7, 195, 16, 0.3), rgba(225, 205, 66, 0.1) 90%), linear-gradient(180deg, rgba(247, 20, 24, 0.15) 30%, rgba(18, 85, 42, 0.1) 95%);
+        .skill-badge-icon {
+            background-image: url('https://res.cloudinary.com/revanthm/image/upload/v1689539419/portfolio-project/skill-icons/wxIcon_rxcwpw.svg');
+            // background-image: url('/assets/img/skill-icons/wxIcon.svg');
+            
+        }
+    }
 }
 .MuiRating-root {
     font-size: 0.8rem !important;
