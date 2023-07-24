@@ -30,7 +30,8 @@ export const WorkedOrgInfo = [
         displayTechnologies: "Angular, Typescript, Javascript, HTML, CSS, NGRX, Jasmine, Karma, Cypress, Postman, GIT, Bitbucket, Jenkins, Azure Boards",
         orgLink: "https://www.swiggy.com/",
         iconCss: "",
-        svgComponent: swiggySvg
+        svgComponent: swiggySvg,
+        cssContainer: 'org-swiggy'
     },
     {
         name: "Thomson Reuters",
@@ -50,7 +51,8 @@ export const WorkedOrgInfo = [
         displayTechnologies: "Angular, Typescript, Javascript, HTML, CSS, NGRX, Jasmine, Karma, Cypress, Postman, GIT, Bitbucket, Jenkins, Azure Boards",
         orgLink: "https://www.thomsonreuters.com/",
         iconCss: "",
-        svgComponent: trSvg
+        svgComponent: trSvg,
+        cssContainer: 'org-thomson'
     },
     {
         name: "Colortokens",
@@ -74,6 +76,7 @@ export const WorkedOrgInfo = [
         displayTechnologies: "Angular, Typescript, Javascript, D3, Karma, HTML5, SCSS, Bootstrap, Git, Postman, Atlassian, Clusman, Kubectl.",
         orgLink: "https://colortokens.com",
         iconCss: "",
-        svgComponent: ctSvg
+        svgComponent: ctSvg,
+        cssContainer: 'org-ct'
     },
 ];

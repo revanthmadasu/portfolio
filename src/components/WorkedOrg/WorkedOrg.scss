@@ -5,3 +5,20 @@
 .org-container-mobile {
     background: rgba(0,0,0,0.5);
 }
+.org-content {
+    filter: none;
+    background-color: rgba(0,0,0, 0.4);
+}
+.org-swiggy {
+    // background: linear-gradient(45deg, rgba(110, 60, 5, 0.2), transparent);
+    background-image: url("https://res.cloudinary.com/revanthm/image/upload/v1684279010/portfolio-project/experience/swiggy_tbhq8e.svg");
+    filter: blur(10px);
+}
+
+.org-thomson {
+    background: linear-gradient(45deg, rgba(44, 23, 1, 0.4), transparent);
+}
+
+.org-ct {
+    background: linear-gradient(45deg, rgba(158, 6, 6, 0.4), transparent);
+}
