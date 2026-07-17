@@ -6,13 +6,23 @@ import { RichText } from '../lib/richText';
 import { getSkillIcon } from '../lib/skillIcons';
 import { experiences } from '../data/experience';
 
+function initials(company: string): string {
+  const words = company.split(/\s+/).filter(Boolean);
+  // multi-word -> first letter of first two words; single word -> first two letters
+  const raw =
+    words.length > 1
+      ? words.slice(0, 2).map((w) => w[0]).join('')
+      : company.slice(0, 2);
+  return raw.toUpperCase();
+}
+
 export default function Experience() {
   return (
     <PageTransition>
       <SectionHeading
         eyebrow="Where I've worked"
         title="Experience"
-        subtitle="3+ years shipping products at startups and large enterprises."
+        subtitle="6 years shipping products across cloud, startups and large enterprises."
       />
 
       <div className="relative space-y-6 pl-6 sm:pl-8">
@@ -38,21 +48,36 @@ export default function Experience() {
 
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div className="flex items-center gap-4">
-                <div className="glass grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white/90 p-2">
-                  <img
-                    src={exp.logoUrl}
-                    alt={exp.company}
-                    className="max-h-full max-w-full object-contain"
-                  />
-                </div>
+                {exp.logoUrl ? (
+                  <div className="glass grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-white/90 p-2">
+                    <img
+                      src={exp.logoUrl}
+                      alt={exp.company}
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  </div>
+                ) : (
+                  <div className="glass grid h-14 w-14 shrink-0 place-items-center rounded-2xl font-display text-lg font-bold text-accent">
+                    {initials(exp.company)}
+                  </div>
+                )}
                 <div>
                   <h3 className="font-display text-xl font-bold">{exp.company}</h3>
                   <p className="text-sm text-accent">{exp.role}</p>
                 </div>
               </div>
-              <div className="text-right">
+              <div className="flex flex-col items-end gap-1.5">
+                {exp.status && (
+                  <span
+                    className="inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-[0.7rem] font-medium text-accent"
+                    style={{ borderColor: 'color-mix(in srgb, var(--accent) 45%, transparent)', background: 'var(--accent-soft)' }}
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+                    {exp.status}
+                  </span>
+                )}
                 <span className="chip">{exp.timeline}</span>
-                <p className="mt-1 text-xs text-faint">{exp.period}</p>
+                <p className="text-xs text-faint">{exp.period}</p>
               </div>
             </div>
 
@@ -105,14 +130,16 @@ export default function Experience() {
                   </span>
                 );
               })}
-              <a
-                href={exp.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-auto inline-flex items-center gap-1.5 text-sm text-muted transition hover:text-accent"
-              >
-                Visit <ExternalLink size={14} />
-              </a>
+              {exp.link && (
+                <a
+                  href={exp.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-auto inline-flex items-center gap-1.5 text-sm text-muted transition hover:text-accent"
+                >
+                  Visit <ExternalLink size={14} />
+                </a>
+              )}
             </div>
           </motion.article>
         ))}
