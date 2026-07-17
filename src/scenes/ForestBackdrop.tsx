@@ -97,6 +97,7 @@ function ImageBackdrop({ palette, art }: { palette: BiomePalette; art: BiomeArt 
             style={{
               ...pos,
               height: layer.anchor === 'full' ? undefined : layer.height ?? '60%',
+              opacity: layer.opacity ?? 1,
               backgroundImage: `url(${layer.src})`,
               backgroundSize: layer.fit ?? 'cover',
               backgroundPosition: layer.position ?? (anchor === 'top' ? 'top center' : 'bottom center'),

@@ -23,9 +23,10 @@
 :root,
 :root[data-theme='dark'] {
   color-scheme: dark;
-  --accent: #ff2d6f;
-  --accent-2: #7c5cff;
-  --accent-soft: rgba(255, 45, 111, 0.14);
+  /* evening rain — luminous moss */
+  --accent: #9ec97a;
+  --accent-2: #b6d98f;
+  --accent-soft: rgba(158, 201, 122, 0.16);
   --ink: #f4f4f8;
   --muted: rgba(244, 244, 248, 0.66);
   --faint: rgba(244, 244, 248, 0.4);
@@ -34,9 +35,6 @@
 
   --bg-0: #08080f;
   --bg-1: #0d0d19;
-  --aurora-1: rgba(255, 45, 111, 0.28);
-  --aurora-2: rgba(124, 92, 255, 0.26);
-  --aurora-3: rgba(0, 200, 255, 0.18);
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.12);
   --glass-shadow: rgba(0, 0, 0, 0.45);
@@ -45,9 +43,10 @@
 /* ---------- Light theme ---------- */
 :root[data-theme='light'] {
   color-scheme: light;
-  --accent: #e11556;
-  --accent-2: #6d43ff;
-  --accent-soft: rgba(225, 21, 86, 0.1);
+  /* retained day theme (currently disabled) — deep forest green */
+  --accent: #2f7d4f;
+  --accent-2: #3f8f5c;
+  --accent-soft: rgba(47, 125, 79, 0.12);
   --ink: #171622;
   --muted: rgba(23, 22, 34, 0.66);
   --faint: rgba(23, 22, 34, 0.45);
@@ -56,9 +55,6 @@
 
   --bg-0: #f3f1fb;
   --bg-1: #e9e6f7;
-  --aurora-1: rgba(225, 21, 86, 0.18);
-  --aurora-2: rgba(109, 67, 255, 0.16);
-  --aurora-3: rgba(0, 160, 220, 0.14);
   --glass-bg: rgba(255, 255, 255, 0.55);
   --glass-border: rgba(255, 255, 255, 0.7);
   --glass-shadow: rgba(80, 70, 130, 0.18);
@@ -161,21 +157,22 @@
  *  toggle (which only switches the forest between day and night).
  * ------------------------------------------------------------------ */
 .scene-content {
-  /* override the Tailwind @theme colour tokens directly (the base --ink etc.
-     resolve at :root, so they must be set at this level, not via --ink) */
-  --color-ink: #f4f8f5;
-  --color-muted: rgba(244, 248, 245, 0.74);
-  --color-faint: rgba(244, 248, 245, 0.52);
-  --color-surface: rgba(255, 255, 255, 0.08);
-  --color-line: rgba(255, 255, 255, 0.15);
+  /* Evening-rain theme: dark smoked-glass panels with soft moss text over the
+     misty forest. Override the Tailwind @theme colour tokens directly (the base
+     --ink etc. resolve at :root, so they must be set at this level). */
+  --color-ink: #dbe8d2;
+  --color-muted: rgba(219, 232, 210, 0.66);
+  --color-faint: rgba(219, 232, 210, 0.42);
+  --color-surface: rgba(178, 210, 170, 0.07);
+  --color-line: rgba(178, 210, 170, 0.15);
   /* single-level tokens used directly by .glass / .chip */
-  --surface: rgba(255, 255, 255, 0.08);
-  --line: rgba(255, 255, 255, 0.15);
-  --glass-bg: rgba(10, 16, 13, 0.56);
-  --glass-border: rgba(255, 255, 255, 0.16);
-  --glass-shadow: rgba(0, 0, 0, 0.5);
-  /* baseline inherited text colour so un-classed elements read light */
-  color: #f4f8f5;
+  --surface: rgba(178, 210, 170, 0.07);
+  --line: rgba(178, 210, 170, 0.15);
+  --glass-bg: rgba(11, 17, 13, 0.72);
+  --glass-border: rgba(180, 210, 185, 0.16);
+  --glass-shadow: rgba(0, 0, 0, 0.6);
+  /* baseline inherited text colour so un-classed elements read as soft moss */
+  color: #dbe8d2;
 }
 
 /* lift un-paneled headings/hero text off the imagery */
@@ -183,14 +180,11 @@
 .scene-content h2,
 .scene-content h3,
 .scene-content .scene-lift {
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.55);
 }
 
-/* brighter name gradient for contrast over dark scenery (only the image, so
-   the base background-clip:text stays intact) */
-.scene-content .text-gradient {
-  background-image: linear-gradient(120deg, #ff6b98, #b39bff);
-}
+/* the name/heading gradient now follows the themed accent (firefly lime at
+   night, sun gold by day) — both already bright enough over the dark scenery */
 
 /* frosted panel behind un-paneled content (hero, section headings) so text
    reads cleanly over the busy backdrop */
@@ -198,19 +192,14 @@
   position: relative;
   border-radius: 1.5rem;
   padding: 1.5rem 1.75rem;
-}
-.scene-rail::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  border-radius: inherit;
-  background: rgba(9, 15, 12, 0.52);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 24px 70px -24px rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(14px) saturate(130%);
-  -webkit-backdrop-filter: blur(14px) saturate(130%);
-  pointer-events: none;
+  /* background applied directly on the element (like .glass) so it reliably
+     sits behind the content — a ::before with z-index:-1 escapes behind the
+     fixed scene when the element has no stacking context. */
+  background: rgba(10, 16, 12, 0.78);
+  border: 1px solid rgba(180, 210, 185, 0.14);
+  box-shadow: 0 24px 70px -24px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px) saturate(120%);
+  -webkit-backdrop-filter: blur(20px) saturate(120%);
 }
 
 /* ---------- Scene / biome ---------- */

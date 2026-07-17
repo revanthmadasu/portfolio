@@ -1,17 +1,11 @@
-import { useLocation } from 'react-router-dom';
 import { BiomeScene } from './BiomeScene';
-import { biomeForRoute } from './biomes';
+import { rainforest } from './biomes';
 
 /**
- * App-level biome backdrop driven by the current route. Mounted once and kept
- * alive across navigation so BiomeScene can crossfade one season into the next
- * (Home→rainforest, Experience→autumn, Skills→spring, Projects→winter).
- *
- * The /forest prototype renders its own BiomeScene with a manual switcher, so
- * we stand down there to avoid stacking two scenes.
+ * App-level biome backdrop. Mounted once and kept alive across navigation. The
+ * site currently runs the rainforest biome on every route; the day/night toggle
+ * still switches the forest between its day and night palettes.
  */
 export function RouteScene() {
-  const { pathname } = useLocation();
-  if (pathname === '/forest') return null;
-  return <BiomeScene biome={biomeForRoute(pathname)} />;
+  return <BiomeScene biome={rainforest} />;
 }

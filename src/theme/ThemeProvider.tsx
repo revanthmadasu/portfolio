@@ -17,13 +17,12 @@ const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
 const STORAGE_KEY = 'portfolio-theme';
 
+// The site is currently locked to a single dark "evening rain" theme. The
+// light/day theme is intentionally retained (toggleTheme still works) but the
+// toggle is hidden in the nav — flip this back to read storage/system when we
+// revisit multi-theme support.
 function getInitialTheme(): Theme {
-  if (typeof window === 'undefined') return 'dark';
-  const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
-  if (stored === 'dark' || stored === 'light') return stored;
-  return window.matchMedia('(prefers-color-scheme: light)').matches
-    ? 'light'
-    : 'dark';
+  return 'dark';
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {

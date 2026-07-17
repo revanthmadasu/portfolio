@@ -56,6 +56,8 @@ export interface ArtLayer {
   /** vertical band the plane occupies (Tailwind-free inline height), e.g. '46%' */
   height?: string;
   anchor?: 'top' | 'bottom' | 'full';
+  /** plane opacity (0-1). Lower = more fog-shrouded / recessive. Defaults to 1. */
+  opacity?: number;
 }
 
 export interface BiomeArt {

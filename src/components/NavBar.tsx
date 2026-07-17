@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { navItems } from '../data/nav';
 import { profile } from '../data/profile';
-import { ThemeToggle } from './ThemeToggle';
 
 export function NavBar() {
   return (
@@ -68,7 +67,6 @@ export function NavBar() {
               <Mail size={16} />
             </IconLink>
           </div>
-          <ThemeToggle />
         </div>
       </nav>
     </motion.header>

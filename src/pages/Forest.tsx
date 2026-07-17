@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Wind, Sparkles, Leaf, Flower2, Snowflake } from 'lucide-react';
 import { BiomeScene } from '../scenes/BiomeScene';
 import { useSceneSettings } from '../scenes/SceneSettings';
-import { rainforest, autumn, spring, winter } from '../scenes/biomes';
+import { rainforest } from '../scenes/biomes';
+import { autumn, spring, winter } from '../scenes/biomes.extra';
 import { profile, stats } from '../data/profile';
 
 const options = [

@@ -64,7 +64,7 @@ export default function Home() {
           <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
             <Link
               to="/projects"
-              className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-medium text-white shadow-lg shadow-accent/25 transition hover:shadow-accent/40"
+              className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-semibold text-[#0f1a0c] shadow-lg shadow-accent/25 transition hover:shadow-accent/40"
             >
               View my work
               <ArrowRight

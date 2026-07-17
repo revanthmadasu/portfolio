@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import Skills from './pages/Skills';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
-import Forest from './pages/Forest';
 
 export default function App() {
   const location = useLocation();
@@ -21,7 +20,6 @@ export default function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/forest" element={<Forest />} />
           <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
       </AnimatePresence>
