@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Revanth Madasu — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, animated developer portfolio built with Vite, React 19, TypeScript and Tailwind CSS v4.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- ⚡️ **Vite 6 + React 19 + TypeScript** — fast, modern SPA
+- 🎨 **Tailwind CSS v4** with CSS-variable design tokens
+- 🌗 **Day / night theme** toggle (persisted, respects system preference)
+- 🪟 **Glassmorphism** UI with an animated aurora background
+- 🎬 **Framer Motion** page transitions, scroll reveals and shared-layout project modals
+- 🧩 Content-driven — everything lives in typed files under `src/data/`
 
-### `npm start`
+## Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Node 18+** (developed on Node 22). If you use `nvm`: `nvm use 22`.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Scripts
 
-### `npm test`
+```bash
+npm install     # install dependencies
+npm run dev     # start dev server at http://localhost:5173
+npm run build   # type-check + production build to dist/
+npm run preview # preview the production build
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Structure
 
-### `npm run build`
+```
+src/
+  components/   reusable UI (NavBar, AuroraBackground, ThemeToggle, SkillBadge …)
+  data/         typed content (profile, skills, experience, projects, nav)
+  lib/          helpers (rich-text renderer, skill-icon resolver)
+  pages/        Home, Skills, Experience, Projects
+  theme/        ThemeProvider (day/night)
+  assets/       skill-icon SVGs
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Editing content
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Profile / about / stats** — `src/data/profile.ts`
+- **Skills & HackerRank badges** — `src/data/skills.ts`
+- **Experience** — `src/data/experience.ts`
+- **Projects** — `src/data/projects.ts`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Inline emphasis in text supports `{{highlight}}`, `{***text=Label;type=bold***}`
+and `{***text=Label;type=link;link=https://…***}`.
 
-### `npm run eject`
+## Deploy
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Builds to `dist/`. Configured for Google App Engine (`app.yaml`, `cloudbuild.yaml`).
