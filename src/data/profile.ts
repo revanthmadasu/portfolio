@@ -1,11 +1,11 @@
 export const profile = {
   name: 'Revanth Madasu',
-  title: 'Software Developer',
+  title: 'Software Engineer',
   photoUrl:
     'https://res.cloudinary.com/revanthm/image/upload/v1684275262/portfolio-project/revanth-photo_snj8wg.png',
   greeting: "Hi, I'm",
-  tagline: 'I build fast, polished products used by millions.',
-  location: 'India',
+  tagline: 'I build reliable, high-scale systems and polished products.',
+  location: 'Austin, USA',
   resumeUrl: '',
   links: {
     linkedin: 'https://www.linkedin.com/in/revanth-madasu-465396107/',
@@ -20,25 +20,25 @@ export interface Highlight {
 }
 
 export const highlights: Highlight[] = [
-  { icon: 'rocket', label: 'Problem Solver' },
-  { icon: 'zap', label: 'Productive' },
-  { icon: 'check', label: 'Quality' },
-  { icon: 'users', label: 'Team Work' },
+  { icon: 'rocket', label: 'Distributed Systems' },
+  { icon: 'zap', label: 'Cloud & DevOps' },
+  { icon: 'check', label: 'Reliability' },
+  { icon: 'users', label: 'Mentorship' },
 ];
 
 // Rich-text markup: wrap emphasis in {{ ... }}
 export const summary: string[] = [
-  'Proven software developer with {{3+ years}} experience at top-tier product-based companies.',
-  'Built consumer applications with {{100 Million+}} downloads requiring {{high uptime}} and {{pixel-perfect UI}}.',
-  'Experienced across both small startups and large enterprise organizations.',
-  'Expertise in Frontend: {{TypeScript, JavaScript, React, Redux, Angular}} — and Cloud: {{GCP, AWS}}.',
-  'Supported production for applications with {{160,000+}} restaurant partners and {{1 million+}} weekly orders.',
-  'Problem solver, team player and constant learner — I never compromise on quality and take pride in my work.',
+  'Software engineer with {{6 years}} across full-stack, frontend, and large-scale distributed systems.',
+  'At {{Oracle Cloud}} I support mission-critical services with {{99.99% availability}} across {{~100 global regions}}.',
+  'Skilled in {{TypeScript, JavaScript, React, Angular}} on the frontend and {{Java, Python, Kafka, Kubernetes, Terraform}} across multi-cloud {{OCI, AWS, Azure}}.',
+  'Track record operating {{petabyte-scale}} data ingestion and search systems, leading incident response, and driving production reliability.',
+  'Previously built high-traffic consumer apps at {{Swiggy}} and full-stack SaaS security platforms at {{ColorTokens}}.',
+  'Constant learner who owns features end to end — I never compromise on quality and take pride in my work.',
 ];
 
 export const stats = [
-  { value: '3+', label: 'Years experience' },
-  { value: '100M+', label: 'App downloads' },
-  { value: '10L+', label: 'Users reached' },
-  { value: '3', label: 'Product companies' },
+  { value: '6+', label: 'Years experience' },
+  { value: '99.99%', label: 'Uptime SLA' },
+  { value: '~100', label: 'Global regions' },
+  { value: '10M+', label: 'Users reached' },
 ];
