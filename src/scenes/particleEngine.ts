@@ -26,6 +26,7 @@ const BASE: Record<ParticleKind, number> = {
   firefly: 26,
   snow: 160,
   petal: 34,
+  ember: 60,
 };
 
 const rand = (a: number, b: number) => a + Math.random() * (b - a);
@@ -43,6 +44,8 @@ export class ParticleEngine {
   private raf = 0;
   private running = false;
   private last = 0;
+  /** fire source for embers, in viewport fractions (captured from the emitter) */
+  private emberOrigin: { x: number; spread: number } = { x: 0.5, spread: 0.14 };
 
   constructor(canvas: HTMLCanvasElement) {
     this.canvas = canvas;
@@ -63,6 +66,10 @@ export class ParticleEngine {
   setEmitters(emitters: Emitter[], intensity: Intensity) {
     this.emitters = emitters;
     this.intensity = intensity;
+    const fire = emitters.find((e) => e.kind === 'ember');
+    if (fire?.origin) {
+      this.emberOrigin = { x: fire.origin.x, spread: fire.origin.spread ?? 0.14 };
+    }
     this.rebuild();
   }
 
@@ -146,6 +153,21 @@ export class ParticleEngine {
         base.y = rand(this.h * 0.3, this.h);
         break;
       }
+      case 'ember': {
+        const { x, spread } = this.emberOrigin;
+        base.size = rand(0.8, 2.4);
+        // rises: negative vy, gently accelerating buoyancy handled in step()
+        base.vy = -rand(38, 96);
+        base.vx = rand(-8, 8);
+        base.amp = rand(8, 26);
+        base.freq = rand(0.6, 1.6);
+        base.alpha = rand(0.6, 1);
+        base.color = pick(e.palette, '#ff9d3c');
+        base.x = x * this.w + rand(-spread, spread) * this.w;
+        // stagger vertical start so the column is populated from the fire upward
+        base.y = initial ? rand(this.h * 0.35, this.h) : rand(this.h * 0.9, this.h);
+        break;
+      }
     }
     return base;
   }
@@ -195,6 +217,21 @@ export class ParticleEngine {
           if (p.y < h * 0.25) p.y = h * 0.25;
           else if (p.y > h) p.y = h;
           break;
+        case 'ember':
+          p.phase += p.freq * dt;
+          // buoyant rise (slight acceleration) + horizontal wander
+          p.vy -= 10 * dt;
+          p.y += p.vy * dt;
+          p.x += (p.vx + Math.cos(p.phase) * p.amp) * dt;
+          // fade out over the upper third, then respawn at the fire
+          if (p.y < h * 0.34) p.alpha -= 0.9 * dt;
+          if (p.alpha <= 0.02 || p.y < -10) {
+            Object.assign(
+              p,
+              this.spawn({ kind: 'ember', density: 0, palette: [p.color] }, false)
+            );
+          }
+          break;
       }
     }
   }
@@ -235,6 +272,19 @@ export class ParticleEngine {
         ctx.save();
         ctx.globalAlpha = pulse;
         ctx.shadowBlur = 10;
+        ctx.shadowColor = p.color;
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      } else if (p.kind === 'ember') {
+        // bright, additive spark with a soft halo and a flicker
+        const flick = 0.7 + 0.3 * Math.sin(p.phase * 6);
+        ctx.save();
+        ctx.globalCompositeOperation = 'lighter';
+        ctx.globalAlpha = Math.max(0, Math.min(1, p.alpha)) * flick;
+        ctx.shadowBlur = 12;
         ctx.shadowColor = p.color;
         ctx.fillStyle = p.color;
         ctx.beginPath();

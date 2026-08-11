@@ -52,19 +52,24 @@ export const rainforest: Biome = {
   // ── Real art. sky.jpg is a full misty-forest scene (provides the far depth
   //    on its own), so we only overlay two transparent planes: a midground
   //    treeline band and the foreground leaf frame. Larger parallax = nearer.
+  // ── Real art. `sky` is the wide panorama: only ~1/N of it is visible per tab,
+  //    and navigating pans horizontally across it (moving "forward" through the
+  //    scene). The mid/near planes ride along at higher `pan` for parallax depth.
+  //    To use a true panorama, drop a wide image at the path below (replacing the
+  //    ~16:9 placeholder) — everything else already scales to it.
   art: {
     day: {
-      sky: '/biomes/rainforest/sky.jpg',
+      sky: '/biomes/rainforest/panorama.jpg',
       layers: [
-        { src: '/biomes/rainforest/mid.png',  parallax: 16, anchor: 'top',  height: '72%', opacity: 0.42 },
-        { src: '/biomes/rainforest/near.png', parallax: 42, anchor: 'full', opacity: 0.64 },
+        { src: '/biomes/rainforest/mid.png',  parallax: 16, anchor: 'top',  height: '72%', opacity: 0.42, pan: 12 },
+        { src: '/biomes/rainforest/near.png', parallax: 42, anchor: 'full', opacity: 0.64, pan: 28 },
       ],
     },
     night: {
-      sky: '/biomes/rainforest/sky.jpg',
+      sky: '/biomes/rainforest/panorama.jpg',
       layers: [
-        { src: '/biomes/rainforest/mid.png',  parallax: 16, anchor: 'top',  height: '72%', opacity: 0.42 },
-        { src: '/biomes/rainforest/near.png', parallax: 42, anchor: 'full', opacity: 0.64 },
+        { src: '/biomes/rainforest/mid.png',  parallax: 16, anchor: 'top',  height: '72%', opacity: 0.42, pan: 12 },
+        { src: '/biomes/rainforest/near.png', parallax: 42, anchor: 'full', opacity: 0.64, pan: 28 },
       ],
     },
   },

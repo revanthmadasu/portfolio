@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Github, X, ArrowUpRight } from 'lucide-react';
+import { Github, X, ArrowUpRight, ExternalLink, Sparkles } from 'lucide-react';
 import { PageTransition } from '../components/PageTransition';
 import { SectionHeading } from '../components/SectionHeading';
 import { getSkillIcon } from '../lib/skillIcons';
@@ -14,24 +14,26 @@ const statusLabel: Record<NonNullable<Project['status']>, string> = {
 
 export default function Projects() {
   const [active, setActive] = useState<Project | null>(null);
+  const orderedProjects = [...projects].sort(
+    (a, b) => (a.aiOrder ?? Number.MAX_SAFE_INTEGER) - (b.aiOrder ?? Number.MAX_SAFE_INTEGER),
+  );
 
   return (
     <PageTransition>
       <SectionHeading
-        eyebrow="Things I've built"
-        title="Projects"
-        subtitle="A selection of apps and experiments — click any card for details."
+        eyebrow="Applied AI, shipped"
+        title="AI Products & Projects"
+        subtitle="AI-native products, grounded assistants, and engineering systems built beyond the prototype."
       />
 
       <div className="grid gap-5 sm:grid-cols-2">
-        {projects.map((project, i) => (
+        {orderedProjects.map((project, i) => (
           <motion.button
             key={project.slug}
             layoutId={`card-${project.slug}`}
             onClick={() => setActive(project)}
             initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: i * 0.06 }}
             whileHover={{ y: -6 }}
             className="glass glass-hover group overflow-hidden p-0 text-left"
@@ -40,6 +42,11 @@ export default function Projects() {
               className="relative flex h-40 items-center justify-center overflow-hidden"
               style={{ background: project.imageBg ?? 'var(--surface)' }}
             >
+              {project.category && (
+                <span className="absolute left-3 top-3 flex items-center gap-1.5 rounded-full bg-black/45 px-2.5 py-1 text-[0.65rem] font-medium uppercase tracking-wider text-white backdrop-blur">
+                  <Sparkles size={11} /> {project.category}
+                </span>
+              )}
               <img
                 src={project.imageUrl}
                 alt={project.title}
@@ -61,18 +68,16 @@ export default function Projects() {
                 />
               </div>
               <p className="mt-1 text-sm text-muted">{project.tagline}</p>
+              {project.impact && <p className="mt-3 font-display text-xs font-semibold text-accent">{project.impact}</p>}
               <div className="mt-4 flex flex-wrap gap-1.5">
-                {project.skills.map((s) => {
+                {project.skills.slice(0, 5).map((s) => {
                   const icon = getSkillIcon(s);
-                  return icon ? (
-                    <img
-                      key={s}
-                      src={icon}
-                      alt={s}
-                      title={s}
-                      className="h-5 w-5 object-contain"
-                    />
-                  ) : null;
+                  return (
+                    <span key={s} className="chip text-[0.65rem] capitalize">
+                      {icon && <img src={icon} alt="" className="h-3.5 w-3.5 object-contain" />}
+                      {s}
+                    </span>
+                  );
                 })}
               </div>
             </div>
@@ -135,6 +140,17 @@ function ProjectModal({
                   <h3 className="font-display text-2xl font-bold">{project.title}</h3>
                   <p className="mt-1 text-sm text-accent">{project.tagline}</p>
                 </div>
+                <div className="flex gap-2">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="glass glass-hover inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm"
+                  >
+                    <ExternalLink size={16} /> Visit
+                  </a>
+                )}
                 {project.gitUrl && (
                   <a
                     href={project.gitUrl}
@@ -145,6 +161,7 @@ function ProjectModal({
                     <Github size={16} /> Code
                   </a>
                 )}
+                </div>
               </div>
 
               <div className="mt-5 space-y-2">

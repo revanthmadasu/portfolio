@@ -8,9 +8,9 @@ export default function Skills() {
   return (
     <PageTransition>
       <SectionHeading
-        eyebrow="What I work with"
-        title="Skills & Tools"
-        subtitle="A toolkit built across frontend, backend, cloud and testing."
+        eyebrow="Models meet engineering"
+        title="AI & Engineering Toolkit"
+        subtitle="The model, product, and infrastructure layers I use to take AI systems into production."
       />
 
       <div className="space-y-10">
@@ -44,8 +44,7 @@ export default function Skills() {
             <motion.div
               key={badge.name}
               initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
               whileHover={{ y: -6, rotate: -2 }}
               className="glass glass-hover flex w-28 flex-col items-center gap-2 p-4"

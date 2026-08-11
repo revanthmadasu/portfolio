@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">AI operations assistant</title>
+  <defs><linearGradient id="g" x1="20" y1="18" x2="108" y2="110"><stop stop-color="#b9f38c"/><stop offset="1" stop-color="#61c9c2"/></linearGradient></defs>
+  <circle cx="64" cy="64" r="44" fill="#0b1717" stroke="url(#g)" stroke-width="4"/>
+  <circle cx="64" cy="64" r="10" fill="url(#g)"/>
+  <g fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round">
+    <path d="M64 54V32M71 58l20-12M72 69l21 13M57 70 37 84M56 58 37 45"/>
+  </g>
+  <g fill="#d8ff9b"><circle cx="64" cy="27" r="7"/><circle cx="96" cy="43" r="7"/><circle cx="98" cy="85" r="7"/><circle cx="33" cy="88" r="7"/><circle cx="31" cy="42" r="7"/></g>
+</svg>

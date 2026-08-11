@@ -29,13 +29,13 @@ const trLogo =
 export const experiences: Experience[] = [
   {
     company: 'Scrollwise',
-    role: 'Founding Engineer · Personal Venture',
+    role: 'Founder & Founding Engineer',
     timeline: 'May 2026 — Present',
     period: 'Pre-launch',
     status: 'In development',
     link: '',
     description: [
-      'Solo {***text=founding engineer;type=bold***} building an Instagram-style {***text=social-learning SaaS;type=bold***} end to end — a full-stack product spanning a React SPA, a FastAPI backend and an {***text=LLM content-generation service;type=bold***}.',
+      'Building an {***text=AI-native microlearning platform;type=bold***} independently from concept to production-ready pre-launch — owning product strategy, UX, architecture, full-stack development, testing, infrastructure, and release workflows.',
       'Architected the frontend from the ground up with React 18, TypeScript, Vite, React Router and TanStack Query — a swipeable multi-level feed, a reusable data-driven {***text=SVG/Lottie template renderer;type=bold***}, light/dark theming and protected/admin routes with RBAC.',
       'Designed backend APIs in Python (FastAPI, Pydantic, async SQLAlchemy) with {***text=JWT auth;type=bold***} (access/refresh), Google OIDC login, a personalized feed-ranking service and progress tracking on PostgreSQL.',
       'Owned full {***text=serverless deployment on AWS;type=bold***} — FastAPI on Lambda (arm64 via Mangum), a React SPA on S3 + CloudFront and event-driven generation on ECS Fargate over shared RDS PostgreSQL.',
@@ -52,9 +52,9 @@ export const experiences: Experience[] = [
   {
     company: 'Oracle Cloud Infrastructure',
     logoUrl: oracleLogo,
-    role: 'Software Engineer',
-    timeline: 'Aug 2024 — Present',
-    period: 'Present',
+    role: 'Software Development Engineer 2',
+    timeline: 'Aug 2024 — Apr 2026',
+    period: '1 yr 9 months',
     link: 'https://www.oracle.com/cloud/',
     description: [
       'Engineer on a {***text=tier-1, customer-facing OCI service;type=bold***} with a {***text=99.99% availability SLA;type=bold***}, running continuously across {***text=~100 global regions;type=bold***}.',
