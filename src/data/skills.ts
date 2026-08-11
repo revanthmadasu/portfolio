@@ -13,6 +13,21 @@ export interface SkillGroup {
 
 export const skillGroups: SkillGroup[] = [
   {
+    label: 'AI Engineering',
+    skills: [
+      { name: 'AWS Bedrock', iconKey: 'aws', rating: 4, categories: ['ai', 'cloud'] },
+      { name: 'Claude API', iconKey: 'claude', rating: 4, categories: ['ai', 'model'] },
+      { name: 'OpenAI API', iconKey: 'openai', rating: 4, categories: ['ai', 'model'] },
+      { name: 'RAG', iconKey: 'rag', rating: 4, categories: ['ai', 'retrieval'] },
+      { name: 'Agentic AI', iconKey: 'agentic', rating: 4, categories: ['ai', 'agents'] },
+      { name: 'Embeddings', iconKey: 'embeddings', rating: 4, categories: ['ai', 'retrieval'] },
+      { name: 'Vector DBs', iconKey: 'postgresql', rating: 3.5, categories: ['ai', 'database'] },
+      { name: 'MCP', iconKey: 'mcp', rating: 3.5, categories: ['ai', 'agents'] },
+      { name: 'Gemini', iconKey: 'gemini', rating: 3.5, categories: ['ai', 'model'] },
+      { name: 'Ollama', iconKey: 'ollama', rating: 3.5, categories: ['ai', 'model'] },
+    ],
+  },
+  {
     label: 'Languages',
     skills: [
       { name: 'TypeScript', iconKey: 'typescript', rating: 4.5, categories: ['programming', 'frontend'] },

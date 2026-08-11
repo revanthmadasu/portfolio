@@ -1,11 +1,12 @@
+import profilePhoto from '../assets/img/revanth-headshot.webp';
+
 export const profile = {
   name: 'Revanth Madasu',
-  title: 'Software Engineer',
-  photoUrl:
-    'https://res.cloudinary.com/revanthm/image/upload/v1684275262/portfolio-project/revanth-photo_snj8wg.png',
+  title: 'AI Product Engineer',
+  photoUrl: profilePhoto,
   greeting: "Hi, I'm",
-  tagline: 'I build reliable, high-scale systems and polished products.',
-  location: 'Austin, USA',
+  tagline: 'I turn ambitious AI ideas into reliable, polished products — from model orchestration to production infrastructure.',
+  location: 'Austin, TX',
   resumeUrl: '',
   links: {
     linkedin: 'https://www.linkedin.com/in/revanth-madasu-465396107/',
@@ -15,30 +16,36 @@ export const profile = {
 };
 
 export interface Highlight {
-  icon: 'rocket' | 'zap' | 'check' | 'users';
+  icon: 'brain' | 'workflow' | 'layers' | 'shield';
   label: string;
 }
 
 export const highlights: Highlight[] = [
-  { icon: 'rocket', label: 'Distributed Systems' },
-  { icon: 'zap', label: 'Cloud & DevOps' },
-  { icon: 'check', label: 'Reliability' },
-  { icon: 'users', label: 'Mentorship' },
+  { icon: 'brain', label: 'Agentic AI' },
+  { icon: 'workflow', label: 'Model Orchestration' },
+  { icon: 'layers', label: 'Multimodal Generation' },
+  { icon: 'shield', label: 'Production AI' },
 ];
 
 // Rich-text markup: wrap emphasis in {{ ... }}
 export const summary: string[] = [
-  'Software engineer with {{6 years}} across full-stack, frontend, and large-scale distributed systems.',
-  'At {{Oracle Cloud}} I support mission-critical services with {{99.99% availability}} across {{~100 global regions}}.',
-  'Skilled in {{TypeScript, JavaScript, React, Angular}} on the frontend and {{Java, Python, Kafka, Kubernetes, Terraform}} across multi-cloud {{OCI, AWS, Azure}}.',
-  'Track record operating {{petabyte-scale}} data ingestion and search systems, leading incident response, and driving production reliability.',
-  'Previously built high-traffic consumer apps at {{Swiggy}} and full-stack SaaS security platforms at {{ColorTokens}}.',
-  'Constant learner who owns features end to end — I never compromise on quality and take pride in my work.',
+  'Product-minded engineer with {{7 years of experience}} building AI-powered products, developer tools, and globally distributed systems.',
+  'Founder of {{Scrollwise}}, an AI-native microlearning platform that turns a prompt into educational content, imagery, structured layouts, and interactive SVG/Lottie experiences.',
+  'I design {{agentic workflows, RAG systems, embeddings, vector search, and multi-model pipelines}} using AWS Bedrock, Claude, OpenAI, Gemini, and Ollama.',
+  'My AI work is grounded in production engineering: {{React and TypeScript}} experiences, {{Python and Java}} services, cloud infrastructure, observability, evaluation, and release operations.',
+  'At {{Oracle Cloud}}, I built an AI operations assistant and operated petabyte-scale services with {{99.99% availability}} across {{~100 global regions}}.',
 ];
 
 export const stats = [
-  { value: '6+', label: 'Years experience' },
+  { value: '7', label: 'Years engineering' },
   { value: '99.99%', label: 'Uptime SLA' },
   { value: '~100', label: 'Global regions' },
-  { value: '10M+', label: 'Users reached' },
+  { value: '1M+', label: 'Users engaged' },
+];
+
+export const aiWorkflow = [
+  { step: '01', title: 'Plan', detail: 'Scope, curricula, and structured generation contracts' },
+  { step: '02', title: 'Orchestrate', detail: 'Route tasks across specialized models and tools' },
+  { step: '03', title: 'Create', detail: 'Generate copy, images, layouts, SVG, and Lottie' },
+  { step: '04', title: 'Validate', detail: 'Check quality, prevent duplicates, and ship reliably' },
 ];

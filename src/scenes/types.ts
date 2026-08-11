@@ -4,16 +4,19 @@
 // touching the biome definitions or the pages that consume them.
 // ------------------------------------------------------------------
 
-export type ParticleKind = 'rain' | 'leaf' | 'mist' | 'firefly' | 'snow' | 'petal';
+export type ParticleKind = 'rain' | 'leaf' | 'mist' | 'firefly' | 'snow' | 'petal' | 'ember';
 
 export interface Emitter {
   kind: ParticleKind;
   /** 0..1 relative density; actual count is scaled by viewport area + intensity */
   density: number;
-  /** optional colour palette (leaves, petals, fireflies) */
+  /** optional colour palette (leaves, petals, fireflies, embers) */
   palette?: string[];
   /** horizontal drift, positive = rightward wind */
   wind?: number;
+  /** spawn origin as viewport fractions (0..1). Used by embers to rise from a
+   *  fixed fire source; defaults to a full-width spread. */
+  origin?: { x: number; spread?: number };
 }
 
 /** One parallax layer of the backdrop. `depth` 0 = far (sky), 1 = nearest. */
@@ -58,10 +61,16 @@ export interface ArtLayer {
   anchor?: 'top' | 'bottom' | 'full';
   /** plane opacity (0-1). Lower = more fog-shrouded / recessive. Defaults to 1. */
   opacity?: number;
+  /** forward-travel pan, in vw. As the visitor advances through the tabs the
+   *  plane slides horizontally by this much across the full route range. Larger
+   *  = nearer / faster (stronger parallax). Defaults to 0 (static). */
+  pan?: number;
 }
 
 export interface BiomeArt {
-  /** opaque full-bleed background image (sky / atmosphere) */
+  /** opaque full-bleed background image — ideally a WIDE panorama. Only ~1/N of
+   *  it is shown at a time; navigating between the N nav tabs pans horizontally
+   *  across it (0% → 100%), so it reads as moving forward through the scene. */
   sky?: string;
   /** transparent depth planes, ordered far -> near */
   layers: ArtLayer[];

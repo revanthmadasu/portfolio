@@ -1,0 +1,49 @@
+<svg width="384" height="304" viewBox="156 40 384 304" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ScrollWise">
+  <title>ScrollWise</title>
+  <defs>
+    <linearGradient id="sw-brain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c4b5fd"/>
+      <stop offset="100%" stop-color="#7c5cff"/>
+    </linearGradient>
+    <linearGradient id="sw-screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c1c26"/>
+      <stop offset="100%" stop-color="#141019"/>
+    </linearGradient>
+  </defs>
+
+  <g fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.75">
+    <path d="M300,182 H266 V152"/>
+    <path d="M300,222 H252"/>
+    <path d="M300,262 H272 V284"/>
+    <path d="M388,178 H424 V144"/>
+    <path d="M388,218 H446"/>
+    <path d="M388,258 H430 V282"/>
+    <path d="M326,150 V122 H306"/>
+    <path d="M362,150 V116"/>
+    <path d="M344,302 V322"/>
+  </g>
+  <g fill="#7c5cff" stroke="#c4b5fd" stroke-width="1.5">
+    <circle cx="266" cy="146" r="4.5"/>
+    <circle cx="246" cy="222" r="4.5"/>
+    <circle cx="272" cy="290" r="4.5"/>
+    <circle cx="424" cy="138" r="4.5"/>
+    <circle cx="452" cy="218" r="4.5"/>
+    <circle cx="430" cy="288" r="4.5"/>
+    <circle cx="300" cy="122" r="4.5"/>
+    <circle cx="344" cy="328" r="4.5"/>
+  </g>
+  <path d="M362,96 C363.5,103 365,104.5 372,106 C365,107.5 363.5,109 362,116 C360.5,109 359,107.5 352,106 C359,104.5 360.5,103 362,96 Z" fill="#c4b5fd"/>
+
+  <rect x="300" y="150" width="88" height="152" rx="17" fill="url(#sw-screen)" stroke="#c4b5fd" stroke-width="2.5"/>
+  <rect x="334" y="156" width="20" height="3.5" rx="1.75" fill="#3a3a48"/>
+  <rect x="309" y="170" width="70" height="30" rx="6" fill="#7c5cff"/>
+  <path d="M337,175 C338.8,183 340.5,184.7 348.5,186.5 C340.5,188.3 338.8,190 337,198 C335.2,190 333.5,188.3 325.5,186.5 C333.5,184.7 335.2,183 337,175 Z" fill="#ede9ff"/>
+  <path d="M356,178 C356.9,182 357.8,182.9 361.8,183.8 C357.8,184.7 356.9,185.6 356,189.6 C355.1,185.6 354.2,184.7 350.2,183.8 C354.2,182.9 355.1,182 356,178 Z" fill="#ede9ff" fill-opacity="0.85"/>
+  <rect x="309" y="210" width="70" height="6" rx="3" fill="#33333f"/>
+  <rect x="309" y="221" width="52" height="6" rx="3" fill="#33333f"/>
+  <rect x="309" y="237" width="70" height="24" rx="6" fill="#a78bfa" fill-opacity="0.4"/>
+  <rect x="309" y="271" width="44" height="6" rx="3" fill="#33333f"/>
+  <rect x="309" y="282" width="60" height="6" rx="3" fill="#33333f"/>
+
+  <path d="M196,218 C172,196 172,158 200,136 C192,112 214,88 244,94 C248,72 282,62 304,78 C318,56 356,54 372,74 C394,58 428,64 438,88 C466,82 492,102 488,130 C514,138 524,168 506,190 C524,210 516,240 490,248 C496,268 484,290 458,292 C452,310 444,326 424,332 C416,334 410,328 414,320 C426,312 430,304 428,296" fill="none" stroke="url(#sw-brain)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

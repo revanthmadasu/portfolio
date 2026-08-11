@@ -20,9 +20,9 @@ export default function Experience() {
   return (
     <PageTransition>
       <SectionHeading
-        eyebrow="Where I've worked"
+        eyebrow="AI products, backed by scale"
         title="Experience"
-        subtitle="6 years shipping products across cloud, startups and large enterprises."
+        subtitle="7 years building AI-native products, cloud platforms, and consumer experiences."
       />
 
       <div className="relative space-y-6 pl-6 sm:pl-8">
@@ -36,8 +36,7 @@ export default function Experience() {
           <motion.article
             key={exp.company}
             initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: idx * 0.05 }}
             className="glass glass-hover relative p-6 sm:p-8"
           >

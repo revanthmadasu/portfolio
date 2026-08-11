@@ -16,7 +16,15 @@ interface Slot {
 
 /** One crossfading scene layer. Base layer shows immediately; later layers
  *  fade in over the outgoing one. */
-function SceneLayer({ slot, active }: { slot: Slot; active: boolean }) {
+function SceneLayer({
+  slot,
+  active,
+  progress,
+}: {
+  slot: Slot;
+  active: boolean;
+  progress: number;
+}) {
   const [opacity, setOpacity] = useState(slot.fadeIn ? 0 : 1);
   useEffect(() => {
     // hidden tabs throttle rAF + freeze transitions — jump straight to target
@@ -36,7 +44,7 @@ function SceneLayer({ slot, active }: { slot: Slot; active: boolean }) {
         transition: document.hidden ? 'none' : 'opacity 1s ease-in-out',
       }}
     >
-      <ForestBackdrop palette={slot.palette} art={slot.art} />
+      <ForestBackdrop palette={slot.palette} art={slot.art} progress={progress} />
       <ParticleCanvas emitters={slot.emitters} />
       <div className="absolute inset-0" style={{ background: slot.palette.grade }} />
       <div
@@ -50,7 +58,7 @@ function SceneLayer({ slot, active }: { slot: Slot; active: boolean }) {
   );
 }
 
-export function BiomeScene({ biome }: { biome: Biome }) {
+export function BiomeScene({ biome, progress = 0 }: { biome: Biome; progress?: number }) {
   const { theme } = useTheme();
   const { reducedMotion } = useSceneSettings();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -104,7 +112,12 @@ export function BiomeScene({ biome }: { biome: Biome }) {
       aria-hidden
     >
       {stack.map((slot) => (
-        <SceneLayer key={slot.key} slot={slot} active={slot.key === lastKey} />
+        <SceneLayer
+          key={slot.key}
+          slot={slot}
+          active={slot.key === lastKey}
+          progress={progress}
+        />
       ))}
     </div>
   );

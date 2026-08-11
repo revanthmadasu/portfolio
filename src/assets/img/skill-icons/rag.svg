@@ -1,0 +1,8 @@
+<svg role="img" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <title>Retrieval-Augmented Generation</title>
+  <defs><linearGradient id="r" x1="10" y1="8" x2="54" y2="56"><stop stop-color="#B6D98F"/><stop offset="1" stop-color="#55C8B0"/></linearGradient></defs>
+  <path d="M11 13h25l8 8v17a7 7 0 0 1-7 7H11a5 5 0 0 1-5-5V18a5 5 0 0 1 5-5Z" fill="none" stroke="url(#r)" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M36 13v10h10M15 27h17M15 35h12" fill="none" stroke="url(#r)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="45" cy="45" r="10" fill="#0D1915" stroke="#B6D98F" stroke-width="4"/>
+  <path d="m52 52 7 7" stroke="#B6D98F" stroke-width="4" stroke-linecap="round"/>
+</svg>

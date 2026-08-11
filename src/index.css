@@ -219,6 +219,151 @@
   }
 }
 
+/* ---------- Campfire (bottom-centre) ---------- */
+.campfire {
+  /* the fire's visual footprint; scales a touch on wider screens */
+  width: clamp(120px, 15vw, 220px);
+  height: clamp(120px, 15vw, 220px);
+  z-index: 1;
+}
+/* warm light spilling onto the ground/mist around the fire */
+.campfire-glow {
+  position: absolute;
+  left: 50%;
+  bottom: -10%;
+  width: 340%;
+  height: 220%;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    50% 50% at 50% 70%,
+    rgba(255, 150, 60, 0.42) 0%,
+    rgba(255, 110, 40, 0.22) 32%,
+    rgba(255, 90, 30, 0.08) 55%,
+    transparent 72%
+  );
+  filter: blur(6px);
+  animation: fireGlow 3.2s ease-in-out infinite alternate;
+  mix-blend-mode: screen;
+}
+/* glowing coals bed */
+.campfire-base {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  width: 46%;
+  height: 12%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 200, 120, 0.95) 0%,
+    rgba(255, 120, 40, 0.8) 45%,
+    rgba(180, 50, 20, 0.2) 80%,
+    transparent 100%
+  );
+  filter: blur(2px);
+  animation: fireGlow 1.6s ease-in-out infinite alternate;
+  mix-blend-mode: screen;
+}
+.campfire-flames {
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  width: 100%;
+  height: 88%;
+  transform: translateX(-50%);
+}
+.flame {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  border-radius: 50% 50% 50% 50% / 62% 62% 38% 38%;
+  transform-origin: 50% 100%;
+  filter: blur(3px);
+  mix-blend-mode: screen;
+}
+.flame-outer {
+  width: 44%;
+  height: 96%;
+  background: radial-gradient(
+    50% 60% at 50% 78%,
+    rgba(255, 120, 30, 0.85) 0%,
+    rgba(230, 70, 20, 0.5) 55%,
+    transparent 82%
+  );
+}
+.flame-mid {
+  width: 32%;
+  height: 78%;
+  background: radial-gradient(
+    50% 60% at 50% 78%,
+    rgba(255, 170, 55, 0.95) 0%,
+    rgba(255, 110, 30, 0.6) 60%,
+    transparent 85%
+  );
+}
+.flame-inner {
+  width: 20%;
+  height: 58%;
+  background: radial-gradient(
+    50% 60% at 50% 78%,
+    rgba(255, 225, 130, 0.98) 0%,
+    rgba(255, 160, 50, 0.7) 62%,
+    transparent 88%
+  );
+  filter: blur(2px);
+}
+.flame-core {
+  width: 11%;
+  height: 34%;
+  background: radial-gradient(
+    50% 55% at 50% 70%,
+    rgba(255, 245, 220, 0.98) 0%,
+    rgba(200, 220, 255, 0.6) 55%,
+    transparent 85%
+  );
+  filter: blur(1.5px);
+}
+.campfire-flames.is-animated .flame-outer {
+  animation: flameSway 2.4s ease-in-out infinite alternate;
+}
+.campfire-flames.is-animated .flame-mid {
+  animation: flameSway 1.7s ease-in-out infinite alternate;
+}
+.campfire-flames.is-animated .flame-inner {
+  animation: flameFlicker 0.9s ease-in-out infinite alternate;
+}
+.campfire-flames.is-animated .flame-core {
+  animation: flameFlicker 0.55s ease-in-out infinite alternate;
+}
+@keyframes flameFlicker {
+  0% {
+    transform: translateX(-50%) scaleY(0.94) scaleX(1.02);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateX(-52%) scaleY(1.08) scaleX(0.96);
+    opacity: 1;
+  }
+}
+@keyframes flameSway {
+  0% {
+    transform: translateX(-53%) rotate(-3deg) scaleY(0.96);
+  }
+  100% {
+    transform: translateX(-47%) rotate(3deg) scaleY(1.06);
+  }
+}
+@keyframes fireGlow {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

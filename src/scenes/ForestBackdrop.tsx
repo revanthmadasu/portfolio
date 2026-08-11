@@ -48,14 +48,29 @@ function FoliageNear({ color }: { color: string }) {
 /** Real-art renderer: opaque sky image + transparent depth planes, each
  *  translated by its own parallax factor via --mx / --my. Falls back to the
  *  palette sky gradient if no sky image is supplied. */
-function ImageBackdrop({ palette, art }: { palette: BiomePalette; art: BiomeArt }) {
+function ImageBackdrop({
+  palette,
+  art,
+  progress,
+}: {
+  palette: BiomePalette;
+  art: BiomeArt;
+  /** forward-travel position across the nav tabs, 0 (first) → 1 (last) */
+  progress: number;
+}) {
+  const panEase = 'transform 1.1s cubic-bezier(0.22, 1, 0.36, 1)';
   return (
     <div className="absolute inset-0 overflow-hidden">
-      {/* sky: image if provided, else palette gradient so it never goes blank */}
+      {/* panorama sky: only a slice is visible; navigating pans it 0% → 100% so
+          the scene reads as moving forward. Falls back to a gradient if absent. */}
       {art.sky ? (
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${art.sky})` }}
+          className="absolute inset-0 bg-cover"
+          style={{
+            backgroundImage: `url(${art.sky})`,
+            backgroundPosition: `${(progress * 100).toFixed(2)}% center`,
+            transition: `background-position 1.1s cubic-bezier(0.22, 1, 0.36, 1)`,
+          }}
         />
       ) : (
         <div
@@ -80,32 +95,48 @@ function ImageBackdrop({ palette, art }: { palette: BiomePalette; art: BiomeArt 
           transform: 'translate3d(calc(var(--mx,0)*-14px), calc(var(--my,0)*-8px), 0)',
         }}
       />
-      {/* transparent depth planes, far -> near */}
+      {/* transparent depth planes, far -> near. Each rides in a wrapper that
+          pans forward with the route (smoothly, at its own speed = parallax);
+          the inner plane keeps the snappy pointer parallax. */}
       {art.layers.map((layer, i) => {
         const anchor = layer.anchor ?? 'bottom';
-        const pos =
-          anchor === 'top'
-            ? { top: 0 as const }
-            : anchor === 'full'
-            ? { inset: 0 as const }
-            : { bottom: 0 as const };
         const p = layer.parallax;
+        const pan = layer.pan ?? 0;
+        // wrapper geometry: over-widened by `pan` vw so the forward slide never
+        // exposes an edge. Anchored so progress 0 shows the left of the plane.
+        const wrapPos: Record<string, string | number> =
+          anchor === 'top'
+            ? { top: 0, height: layer.height ?? '60%' }
+            : anchor === 'full'
+            ? { top: 0, bottom: 0 }
+            : { bottom: 0, height: layer.height ?? '60%' };
         return (
           <div
             key={`${layer.src}-${i}`}
-            className="absolute inset-x-0"
+            className="absolute"
             style={{
-              ...pos,
-              height: layer.anchor === 'full' ? undefined : layer.height ?? '60%',
-              opacity: layer.opacity ?? 1,
-              backgroundImage: `url(${layer.src})`,
-              backgroundSize: layer.fit ?? 'cover',
-              backgroundPosition: layer.position ?? (anchor === 'top' ? 'top center' : 'bottom center'),
-              backgroundRepeat: 'no-repeat',
-              transform: `translate3d(calc(var(--mx,0)*${p}px), calc(var(--my,0)*${p * 0.6}px), 0)`,
+              ...wrapPos,
+              left: 0,
+              width: pan ? `calc(100% + ${pan}vw)` : '100%',
+              transform: `translate3d(${(-progress * pan).toFixed(2)}vw, 0, 0)`,
+              transition: panEase,
               willChange: 'transform',
             }}
-          />
+          >
+            <div
+              className="absolute inset-0"
+              style={{
+                opacity: layer.opacity ?? 1,
+                backgroundImage: `url(${layer.src})`,
+                backgroundSize: layer.fit ?? 'cover',
+                backgroundPosition:
+                  layer.position ?? (anchor === 'top' ? 'top center' : 'bottom center'),
+                backgroundRepeat: 'no-repeat',
+                transform: `translate3d(calc(var(--mx,0)*${p}px), calc(var(--my,0)*${p * 0.6}px), 0)`,
+                willChange: 'transform',
+              }}
+            />
+          </div>
         );
       })}
       {/* ground mist to seat the nearest plane into the scene */}
@@ -117,8 +148,16 @@ function ImageBackdrop({ palette, art }: { palette: BiomePalette; art: BiomeArt 
   );
 }
 
-export function ForestBackdrop({ palette, art }: { palette: BiomePalette; art?: BiomeArt }) {
-  if (art) return <ImageBackdrop palette={palette} art={art} />;
+export function ForestBackdrop({
+  palette,
+  art,
+  progress = 0,
+}: {
+  palette: BiomePalette;
+  art?: BiomeArt;
+  progress?: number;
+}) {
+  if (art) return <ImageBackdrop palette={palette} art={art} progress={progress} />;
   return (
     <div className="absolute inset-0 overflow-hidden">
       {/* sky */}
