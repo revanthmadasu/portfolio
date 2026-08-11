@@ -25,7 +25,7 @@ export const projects: Project[] = [
     slug: 'scrollwise',
     title: 'Scrollwise',
     tagline: 'AI-native microlearning, generated end to end',
-    imageUrl: '/scrollwise-ai.svg',
+    imageUrl: '/scrollwise-logo.svg',
     imageBg: 'linear-gradient(135deg, #15121f, #261d3d)',
     liveUrl: 'https://scrollwise.net',
     status: 'ongoing',

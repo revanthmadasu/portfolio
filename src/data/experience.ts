@@ -29,6 +29,7 @@ const trLogo =
 export const experiences: Experience[] = [
   {
     company: 'Scrollwise',
+    logoUrl: '/scrollwise-logo.svg',
     role: 'Founder & Founding Engineer',
     timeline: 'May 2026 — Present',
     period: 'Pre-launch',
